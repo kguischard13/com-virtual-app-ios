@@ -105,7 +105,7 @@ var EmotionApp = window.EmotionApp || {};
             	.appendTo(pnlContainer)
             	.append(txtUserName);      
             	
-            txtPassword =$("<input type='text' />")
+            txtPassword =$("<input type='password' />")
                 .addClass("reg-form-input")
                 .appendTo(pnlContainer);
                 

@@ -14,16 +14,19 @@
 .emotion-registration-control .reg-form-label
 {
 	display: block; 
-	height: 50px; 
+	height: 82px; 
 	font-weight: bold; 
 	font-size: 18px; 
+	width: 375px; 
 }
 
 .emotion-registration-control .reg-form-input
 {
-	position: relative; 
-	left: 8px;
+	position: absolute;
+	left: 649px;
 	width: 250px;
+	height: 30px;
+	font-size: 14px;
 }
 
 .emotion-registration-control .btn-form
@@ -37,7 +40,8 @@
 	position: relative;
 	width: 211px;
 	height: 40px;
-	/*left: 147px; */
+	float: right;
+	left: 6px;
 }
 
 #btnSubmit
