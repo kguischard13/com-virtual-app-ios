@@ -1,0 +1,189 @@
+body
+{
+	background-color: #D1F0FF;
+}
+
+#container
+{
+	width: auto;
+	height:auto; 
+}
+
+#top-navigation
+{
+	margin-right: auto;
+	margin-left: auto; 
+	width: 100%;
+	height: 40px;
+	line-height: 39px;
+}
+
+#navigation
+{
+	height: 40px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white; 
+	border-bottom: 1px solid gray; 
+	margin-top: -16px;
+}
+
+#nav-list
+{
+	width: auto;
+	height: 40px;
+	text-align: center; 
+	margin-left: -70px;
+	margin-right: 6px;
+	margin-top: -16px;
+}
+
+#navigation ul
+{
+	list-style-type: none; 
+}
+
+#navigation ul ul li
+{
+	border-bottom: 1px solid gray; 
+}
+
+.top-level
+{
+	float: left; 
+	width: 20%; 
+}
+
+.top-level a
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#navigation ul li a
+{
+	color: gray;
+	text-decoration: none; 
+}
+
+#navigation #sub-menu
+{
+	position: relative; 
+	text-align: center; 
+	background-color: white; 
+	padding: 0px; 
+	margin-top: 2px; 
+	color: gray; 
+	width: auto; 
+	left: 6px; 
+}
+
+#how,
+#emotions,
+#activities,
+#account, 
+#home, 
+#login, 
+#new-user,
+#forgot-password
+{
+	background-repeat: no-repeat; 
+	background-position: left; 
+	padding-left: 25px;
+}
+
+#home
+{
+	background-image: url(img/home-icon_20x20.png); 
+}
+
+#how
+{
+	background-image: url(img/info-icon_20x20.png); 
+}
+
+#emotions
+{
+	background-image: url(img/emotions-icon_20x20.png); 
+}
+
+#activities
+{
+	background-image: url(img/activity-icon4_20x20.png);
+}
+
+#account
+{
+	background-image: url(img/user-icon_20x20.png);
+}
+
+#login
+{
+	background-image: url(img/lock-icon_20x20.png);
+}
+
+#new-user
+{
+	background-image: url(img/add-user-icon_20x20.png);
+}
+
+#forgot-password
+{
+	background-image: url(img/question-icon_20x20.png);
+}
+
+
+#navigation a:hover
+{
+	background-color: #FFFFCC; 
+}
+
+.tooltip
+{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+
+#page-content
+{
+	width:auto;
+	height:auto;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+#emotion_buttons
+{
+	margin-right: auto;
+	margin-left: auto; 
+}
+
+#emotion_buttons tr td
+{
+	margin-right: auto;
+	margin-left: auto; 
+	border-style: outset;
+	border-width: 8px; 
+  	width: 100px;
+  	height: 100px;
+}
+
+#emotion_buttons:hover td
+{
+	border-style: inset;
+}

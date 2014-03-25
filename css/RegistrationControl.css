@@ -1,0 +1,46 @@
+.emotion-registration-control
+{
+
+}
+
+.emotion-registration-control .pnl-container
+{
+	height: 400px; 
+	width: 360px; 
+	margin-right: auto;
+	margin-left: auto; 
+}
+
+.emotion-registration-control .reg-form-label
+{
+	display: block; 
+	height: 50px; 
+	font-weight: bold; 
+	font-size: 18px; 
+}
+
+.emotion-registration-control .reg-form-input
+{
+	position: relative; 
+	left: 8px;
+	width: 250px;
+}
+
+.emotion-registration-control .btn-form
+{
+	height: 40px;
+	width: 100px; 
+}
+
+.emotion-registration-control .pnl-button-container
+{
+	position: relative;
+	width: 211px;
+	height: 40px;
+	/*left: 147px; */
+}
+
+#btnSubmit
+{
+	margin-right: 10px; 
+}
