@@ -5,9 +5,4 @@ $(document).ready(function (){
 	registration.RegistrationControl({}); 
 
 	var registrationTitle = $("welcome-registration"); 
-	
-	
-	
-
-
 }); 
