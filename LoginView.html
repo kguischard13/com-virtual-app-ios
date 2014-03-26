@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Doo-Dah - Home</title>
+        <title>Doo-Dah - Login</title>
         <script src="./js/jquery-1.11.0.js"></script>
         <script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
         <script type="text/javascript" src="./js/HomeView.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/General.css"/>
         <link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
         <link rel="stylesheet" type="text/css" href="./css/LoginView.css"/>
     </head>
@@ -35,7 +36,7 @@
         
         <!-- login fields -->
         <div class="page-content">
-            <h2 id="login-header">Please enter user credentials</h2>
+            <h1 id="header-text">Login to your account</h1>
             <table>
                 <tr>
                     <td>Username:</td>
@@ -47,11 +48,11 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button id="login-button" name="submit" target="#">Log In</button></td>
+                    <td><button type='button' id="login-button" name="submit" target="#" class='btn-form'>Log In</button></td>
                 </tr>
                <tr>
                     <td></td>
-                    <td><button id="login-button" name="forgot-pw" target="#">Forget Password?</button></td>
+                    <td><button type='button' id="login-button" name="forgot-pw" target="#" class='btn-form'>Forget Password?</button></td>
                 </tr>                
             </table>              
         </div>
