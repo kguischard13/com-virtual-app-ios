@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mood Selection</title>
+        <title>Doo-Dah - Mood Selection</title>
         <script src="./js/jquery-1.11.0.js"></script>
         <script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
         <script type="text/javascript" src="./js/HomeView.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/General.css"/>
         <link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
         <link rel="stylesheet" type="text/css" href="./css/EmotionSelectionView.css"/>
     </head>
@@ -33,26 +34,27 @@
             </div>
         </div>
 
-        <br><br>
-
         <!-- mood buttons -->
-        <div id="page-content">
-            <table>
-                <tr>
-                    <td><div id="mbutton-confident"></div></td>
-                    <td><div id="mbutton-happy"></div></td>
-                    <td><div id="mbutton-anxious"></div></td>
-                </tr>
-                <tr>
-                    <td><div id="mbutton-afraid"></div></td>
-                    <td><div id="mbutton-angry"></div></td>
-                    <td><div id="mbutton-dread"></div></td>
-                <tr>           
-                    <td><div id="mbutton-lonely"></div></td>
-                    <td><div id="mbutton-regret"></div></td>
-                    <td><div id="mbutton-sad"></div></td>
-                </tr>
-            </table>    
+        <div class="page-content">
+        	<div id="welcome-mood">
+        		<h1 id="header-text">What mood are you in?</h1>
+					<table>
+						<tr>
+							<td><div id="mbutton-confident"></div></td>
+							<td><div id="mbutton-happy"></div></td>
+							<td><div id="mbutton-anxious"></div></td>
+						</tr>
+						<tr>
+							<td><div id="mbutton-afraid"></div></td>
+							<td><div id="mbutton-angry"></div></td>
+							<td><div id="mbutton-dread"></div></td>
+						<tr>           
+							<td><div id="mbutton-lonely"></div></td>
+							<td><div id="mbutton-regret"></div></td>
+							<td><div id="mbutton-sad"></div></td>
+						</tr>
+					</table>   
+			</div> 
         </div>      
 
         <div id="footer"></div>
