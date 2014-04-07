@@ -1,5 +1,5 @@
 $(document).ready(function () 
-{
+{	
 	var pnlFilterControl = $("#pnlFilterControl"); 
 	pnlFilterControl.FilterControl({}); 
 
@@ -16,6 +16,30 @@ $(document).ready(function ()
 	
 	ctrlActivitySummaryView.ActivitySummaryViewControl("Value", data);
 	
+	var getActivities = function ()
+	{
+		return $.ajax({
+			url: ActivityService.php,
+			type: "GET"		
+			async: true	
+		}); 
+	}
+	
+	var container = document.getElementById("container"); 
+	
+	
+	
+	var button = $('<buttton>Click Here</button>'); 
+	button.appendTo(container); 
+	button.click(getActivities)
+		.done(function (data) {
+			
+			console.log(data); 
+		
+		}); ; 
+
+
+
 /*	var data1 = {
 		ActivityName: "Grab a cold one",
 		LocationInfo: "<p>Bob's Bar</p><p>New Rochelle, NY</p>",
