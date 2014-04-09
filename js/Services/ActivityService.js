@@ -18,7 +18,9 @@ DooDah.Services.ActivityService = (function (dd, $)
 		return $.ajax({
 			type: "GET",
 			url: _getActivitiesUrl,
-			async: true
+			async: true,
+			accept: "application/json",
+			dataType: "json"
 		}); 
 	}
 

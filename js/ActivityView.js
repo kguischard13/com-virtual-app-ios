@@ -22,6 +22,18 @@ $(document).ready(function ()
 	ctrlActivitySummaryView2.ActivitySummaryViewControl({}); 
 	
 	ctrlActivitySummaryView2.ActivitySummaryViewControl("Value", data);
+	
+	var btnActivities = $("#btnActivities"); 
+	
+	btnActivities.click(function ()
+	{
+		return DooDah.Services.ActivityService.GetActivities()
+			.done(function (data) 
+			{
+				console.log(data); 
+			
+			});
+	});  
 
 
 }); 
