@@ -1,6 +1,6 @@
-var EmotionApp = window.EmotionApp || {}; 
+var DooDah = window.DooDah || {}; 
 
-(function ($, EmotionApp, undefined)
+(function ($, dd)
 {
     //  ------------------------------------------------------------------------------------------------
     // Options for the widget
@@ -25,7 +25,7 @@ var EmotionApp = window.EmotionApp || {};
         	DistanceFilterText: "Distance", 
         	MoodFilterText: "Mood", 
         	LabelDoActivity: "Do it!"
-        }
+        }; 
 
         //  ------------------------------------------------------------------------------------------------
         // Instance (global) variables.
@@ -57,36 +57,39 @@ var EmotionApp = window.EmotionApp || {};
             /// <summary>Initialize the widget's DOM elements.</summary>
 			elm.addClass("emotion-activity-summary-view-control"); 
 			
-            pnlContainer = $("<div />")
+            pnlContainer = $("<div></div>")
                 .addClass("pnl-container")
                 .appendTo(elm);
                 
-            pnlImageContainer = $("<div />")
+            pnlImageContainer = $("<div></div>")
             	.addClass("pnl-image-container")
             	.appendTo(pnlContainer); 
             	
-            imgEventImage = $("<img id='eventImage'></img>")
+            imgEventImage = $("<img></img>")
             	.addClass("main-image-display")
             	.appendTo(pnlImageContainer); 
             	                            
-            pnlInfoContainer = $("<div />")
+            pnlInfoContainer = $("<div></div>")
             	.addClass("pnl-info-container")
             	.appendTo(pnlContainer);
             	               
-            pnlEventName = $("<div />")
+            pnlEventName = $("<div></div>")
             	.addClass("pnl-event-name")
             	.html("Event Name")
             	.appendTo(pnlInfoContainer); 
             	
-            pnlLocationInfo = $("<div />")
+            pnlLocationInfo = $("<div></div>")
             	.addClass("pnl-location-info")
             	.appendTo(pnlInfoContainer); 
 
-            pnlDoActivity = $("<div />")
+            pnlDoActivity = $("<div></div>")
             	.addClass("pnl-do-activity")
             	.appendTo(pnlInfoContainer); 
             	
-            chkDoActivity = $("<input type='checkbox' name='do it' value='true' />") 
+            var random = Math.floor((Math.random() * 1000) + 1); 
+            var name = "checkbox_" + random; 
+            	
+            chkDoActivity = $("<input type='checkbox' name='" + name + "'value='true' />") 
             	.addClass("chk-do-activity")
             	.appendTo(pnlInfoContainer); 
             	
@@ -96,20 +99,20 @@ var EmotionApp = window.EmotionApp || {};
             	.prepend(chkDoActivity)
             	.appendTo(pnlDoActivity); 
             	
-            pnlSnapshot = $("<div />")
+            pnlSnapshot = $("<div></div>")
             	.addClass("pnl-snapshot")
-            	.appendTo(pnlContainer);
+            	.appendTo(pnlInfoContainer);
             	
-            pnlPrice = $("<div id='pnl-price-stars' />")
+            pnlPrice = $("<div></div>")
             	.addClass("pnl-price-stars")
             	.html(_strings.PriceFilterText)
             	.appendTo(pnlSnapshot)
             	
-            imgPrice = $("<img id='priceImage'></img>")
+            imgPrice = $("<img></img>")
             	.addClass("price-image-display")
             	.appendTo(pnlPrice);     
             	
-             pnlDistance = $("<div />")
+             pnlDistance = $("<div></div>")
             	.addClass("pnl-distance")
             	.appendTo(pnlSnapshot); 
         };
@@ -171,14 +174,14 @@ var EmotionApp = window.EmotionApp || {};
         {
             // Put the widget into some neutral state.
         };
-
-        //  ------------------------------------------------------------------------------------------------
+        
+        Init();
+        
+    	//  ------------------------------------------------------------------------------------------------
         // Public methods
         //  ------------------------------------------------------------------------------------------------
         
         self.Value = Value; 
-        
-        Init();
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -198,9 +201,9 @@ var EmotionApp = window.EmotionApp || {};
     //  ------------------------------------------------------------------------------------------------
     // Create the jQuery widget class
     //  ------------------------------------------------------------------------------------------------
-    $.widget("EmotionApp.ActivitySummaryViewControl", {
+    $.widget("DooDah.ActivitySummaryViewControl", {
         options: _options,
         _create: create,
         destroy: destroy
     });
-})(jQuery, EmotionApp);
+})(jQuery, DooDah);

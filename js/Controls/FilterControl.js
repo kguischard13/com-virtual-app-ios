@@ -1,6 +1,6 @@
-var EmotionApp = window.EmotionApp || {}; 
+var DooDah = window.DooDah || {}; 
 
-(function ($, EmotionApp, undefined)
+(function ($, dd)
 {
     //  ------------------------------------------------------------------------------------------------
     // Options for the widget
@@ -23,7 +23,7 @@ var EmotionApp = window.EmotionApp || {};
         	SortByText: "Sort Filters: ", 
         	PriceFilterText: "Price",
         	DistanceFilterText: "Distance"
-        }
+        }; 
 
         //  ------------------------------------------------------------------------------------------------
         // Instance (global) variables.
@@ -134,14 +134,14 @@ var EmotionApp = window.EmotionApp || {};
         {
             // Put the widget into some neutral state.
         };
-
+        
+        Init();
+        
         //  ------------------------------------------------------------------------------------------------
         // Public methods
         //  ------------------------------------------------------------------------------------------------
         self.Value = Value;
         self.Clear = Clear;
-        
-        Init();
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -161,9 +161,9 @@ var EmotionApp = window.EmotionApp || {};
     //  ------------------------------------------------------------------------------------------------
     // Create the jQuery widget class
     //  ------------------------------------------------------------------------------------------------
-    $.widget("EmotionApp.FilterControl", {
+    $.widget("DooDah.FilterControl", {
         options: _options,
         _create: create,
         destroy: destroy
     });
-})(jQuery, EmotionApp);
+})(jQuery, DooDah);

@@ -12,23 +12,6 @@ table, td
     border: none;
 }
 
-/* remove default underlines on links */
-a:link
-{
-    text-decoration: none;
-}
-
-/* clicking mood buttons (i.e. links) will not change their appearance to a default visited link */
-a:visited
-{
-    color: #eeeeee;
-}
-
-.button
-{
-    border-style: none;
-}
-
 #mbutton-afraid
 {
     margin-right: auto;

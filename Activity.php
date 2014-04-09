@@ -11,86 +11,63 @@ class Activity
 	protected $locationType; 
 	protected $popularityIndex;
 	protected $description; 
-	protecteed $venueName; 
+	protected $activityDate; 
+	protected $venueName; 
 	
-	function __construct($id, $name, $cost, $city, $state, $zip)
+	public function __construct($id, $name, $cost, $city, $state, $zip, $locationType, $popularityIndex, $description, $activityDate, $venueName)
 	{
-		if(isset($id) && isset($name) && isset($cost) && isset($city) && isset($state) && isset($zip)
-		{
-			$this->$id = $id; 
-			$this->$name = $name; 
-			$this->$cost = $cost; 
-			$this->$city = $city; 
-			$this->$state = $state;
-			$this->$zip = $zip; 
-		}
-	}
-	
-	function __get($id)
-	{
-		return $this->$id; 
+		$this->id = $id; 
+		$this->name = $name; 
+		$this->cost = $cost; 
+		$this->city = $city; 
+		$this->state = $state;
+		$this->zip = $zip; 
+		$this->locationType = $locationType; 
+		$this->popularityIndex = $popularityIndex; 
+		$this->description = $description; 
+		$this->activityDate = $activityDate; 
+		$this->venueName = $venueName; 
 	}
 
-	function __get($name)
+	public function __get($name)
 	{
 		return $this->$name; 
 	}
 	
-	function __get($cost)
+	public function __set($name, $value) 
 	{
-		return $this->$cost; 
+		if(isset($name) && $name == "Id")
+			$this->id = $value;	
+		else if (isset($name) && $name == "Name")
+			$this->name = $value; 
+		else if (isset($name) && $name == "Cost")
+			$this->cost = $value; 		
+		else if (isset($name) && $name == "City")
+			$this->city = $value; 		
+		else if (isset($name) && $name == "State")
+			$this->state = $value; 	
+		else if (isset($name) && $name == "Zip")
+			$this->zip = $value; 	
+		else if (isset($name) && $name == "LocationType")
+			$this->locationType = $value; 	
+		else if (isset($name) && $name == "PopularityIndex")
+			$this->popularityIndex = $value;
+		else if (isset($name) && $name == "Description")
+			$this->description = $value;
+		else if (isset($name) && $name == "ActivityDate")
+			$this->activityDate = $value;
+		else if (isset($name) && $name == "VenueName")
+			$this->venueName = $value;
 	}
 	
-	function __get($city)
+	public function getValue ()
 	{
-		return $this->$city; 
-	}
-	
-	function __get($state)
-	{
-		return $this->$state; 
-	}
-	
-	function __get($zip)
-	{
-		return $this->$zip; 
-	}
-	
-	function __set($name, $value) 
-	{
-		if($name == "id")
-			$this->$id = $value;	
-		else if ($name == "name")
-			$this->$name = $value; 
-		else if ($name == "cost")
-			$this->$name = $value; 		
-		else if ($name == "city")
-			$this->$name = $value; 		
-		else if ($name == "state")
-			$this->$name = $value; 	
-		else if ($name == "zip")
-			$this->$name = $value; 	
-		else if ($name == "locationType")
-			$this->$name = $value; 	
-		else if ($name == "popularityIndex")
-			$this->$name = $value;
-		else if ($name == "description")
-			$this->$name = $value;
-		else if ($name == "venueName")
-			$this->$name = $value;
-	}
-	
-	function getValue ()
-	{
-		echo '{Id:' .$this->$id. ', Name: ' .$this->$name. ', Cost:' .$this->$cost. ', City: ' .$this->$city.
-		', State: ' .$this->$state. ', Zip: ' .$this->$zip. ', LocationType: ' .$this->$locationType.
-		', Popularity: ' .$this->$popularityIndex. ', Description: ' .$this->$description.
-		', VenueName: ' .$this->$venueName. '}'
+		echo "{id:" .$this->id. ", name: " .$this->name. ", cost:" .$this->cost. ", city: " .$this->city.
+		", state: " .$this->state. ", zip: " .$this->zip. ", locationType: " .$this->locationType.
+		", Popularity: " .$this->popularityIndex. ", description: " .$this->description.
+		", activityDate: " .$this->activityDate.", venueName: " .$this->venueName.  "}";
 		
 	}
-
 }
-
-
 
 ?>

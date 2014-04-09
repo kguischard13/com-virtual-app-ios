@@ -1,37 +1,36 @@
 <?php
 
-include("const_enums.inc"); 
-include("ChromePHP.php"); 
+include("const_db.inc"); 
+include("ChromePhp.php"); 
+include("Activity.php"); 
 
 ?>
 
 <?php
 
-	mysql_connect($server, $username, $password);
-	@mysql_select_db($dbname) or die("Unable to select database");
+	$link = mysqli_connect($host, $username, $password, $dbname, $port);
 
-	$queryGetActivities = mysql_query("SELECT * FROM Activity"); 
-	$numRows = mysql_num_rows($queryGetActivities); 
-	
-// 	$qAct = mysql_query("SELECT * FROM tut_Action WHERE PageID=".$currPage." AND ActionNum=".$currAction);
-// 	$actioID = mysql_result($qAct, 0, "ActionID");
-// 
-// 	$qCondit = mysql_query("SELECT * FROM tut_Condition WHERE ActionID=".$actioID);
-// 	$conditionsCount = mysql_num_rows($qCondit);
-// 	$conditionsNames = array();
-// 	$conditionsValues = array();
+	if (mysqli_connect_errno()) 
+	{
+		printf("Connect failed: %s\n", mysqli_connect_errno());
+		exit();
+	}
 
-	$activityObjects = array(); 
+	$queryGetActivities = mysqli_query($link, "SELECT * FROM Activity"); 
+	$numRows = mysqli_num_rows($queryGetActivities); 
 	
+	//$activityObjects = array(); 
 	
 	for ($i=0; $i<$numRows; $i++)
 	{
-		$activityObjects[$i] = mysql_fetch_object($queryGetActivities, "Activity"); 
+		$obj = mysqli_fetch_object($queryGetActivities);
 		
-// 		$activityObjects[$i] = mysql_result($queryGetActivities, $i, "RefName");
-// 		$conditionsValues[$i] = mysql_result($queryGetActivities, $i, "RefValue");
+// 		$activity = new Activity($obj->Id, $obj->Name, $obj->Cost, $obj->City, $obj->State, $obj->Zip, 
+// 		$obj->LocationType, $obj->PopularityIndex, $obj->Description, $obj->ActivityDate, $obj->VenueName); 
+// 		
+// 		$activityObject[$i] = $activity; 
+		echo json_encode($obj); 
 	}
-	
-	echo $activityObjects; 
-
+		
+	mysqli_close($link);
 ?>

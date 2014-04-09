@@ -1,3 +1,9 @@
+.emotion-activity-summary-view-control
+{
+	height: auto;
+	width: 100%; 
+}
+
 .emotion-activity-summary-view-control .pnl-container
 {
 	position: relative; 
@@ -8,8 +14,7 @@
 
 .emotion-activity-summary-view-control .pnl-image-container
 {
-	position: relative;
-	float: left;
+	position: absolute;
 	height: 135px;
 	width: 180px;
 	top: 8px; 
@@ -18,47 +23,62 @@
 
 .emotion-activity-summary-view-control .pnl-info-container
 {
-	position: relative;
+	/* 
+position: relative;
 	height: 150px;
 	float: left;
 	width: 60%;
 	left: 20px;
+ */
+	position: absolute;
+	height: 150px;
+	width: 55%;
+	left: 211px;
+ 
 }
 
 .emotion-activity-summary-view-control .pnl-event-name
 {
-	position: relative;
+	position: absolute;
 	height: 30px;
 	font-weight: bold;
 	font-size: 23px;
 	line-height: 28px;
+	width: 100%;
 }
 
 .emotion-activity-summary-view-control .pnl-location-info
 {
-	position: relative;
+	position: absolute;
 	display: block;
 	height: 80px;
+	width: 100%; 
+	top: 24px; 
 }
 
 .emotion-activity-summary-view-control .lbl-do-activity
 {
 	position: relative;
-	float: right;
-	right: 18px;
 	font-weight: bold;
 	z-index: 1;
-	top: -52px;
 }
 
 .emotion-activity-summary-view-control .pnl-snapshot
 {
+/* 
 	position: relative;
 	display: block;
 	height: 20px;
 	margin-top: 130px;
 	left: 200px;
 	width: 300px;
+ */
+ 
+	position: absolute;
+	display: block;
+	height: 20px;
+	width: 100%;
+	top: 123px; 
 }
 
 .emotion-activity-summary-view-control .pnl-price-stars,
@@ -66,10 +86,19 @@
 {
 	position: relative;
 	float: left; 
-	top: -20px;
+	/*top: -20px;*/
 }
 
 .emotion-activity-summary-view-control .pnl-distance
 {
 	padding-left: 63px;
+}
+
+.emotion-activity-summary-view-control .pnl-do-activity
+{
+	position: absolute;
+	height: 20px;
+	width: auto;
+	left: 147px;
+	top: 77px;
 }
