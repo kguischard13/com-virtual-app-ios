@@ -1,6 +1,6 @@
-var EmotionApp = window.EmotionApp || {}; 
+var DooDah = window.DooDah || {}; 
 
-(function ($, EmotionApp, undefined)
+(function ($, dd)
 {
     //  ------------------------------------------------------------------------------------------------
     // Options for the widget
@@ -27,7 +27,7 @@ var EmotionApp = window.EmotionApp || {};
         	LabelPassword: "Password:",
         	ButtonSubmit: "Register", 
         	ButtonCancel: "Cancel"
-        }
+        }; 
 
         //  ------------------------------------------------------------------------------------------------
         // Instance (global) variables.
@@ -153,14 +153,15 @@ var EmotionApp = window.EmotionApp || {};
         {
             // Put the widget into some neutral state.
         };
-
+        
+        Init();
+        
         //  ------------------------------------------------------------------------------------------------
         // Public methods
         //  ------------------------------------------------------------------------------------------------
+        
         self.Value = Value;
         self.Clear = Clear;
-        
-        Init();
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -180,9 +181,9 @@ var EmotionApp = window.EmotionApp || {};
     //  ------------------------------------------------------------------------------------------------
     // Create the jQuery widget class
     //  ------------------------------------------------------------------------------------------------
-    $.widget("EmotionApp.RegistrationControl", {
+    $.widget("DooDah.RegistrationControl", {
         options: _options,
         _create: create,
         destroy: destroy
     });
-})(jQuery, EmotionApp);
+})(jQuery, DooDah);

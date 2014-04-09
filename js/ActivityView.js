@@ -2,7 +2,8 @@ $(document).ready(function ()
 {	
 	var pnlFilterControl = $("#pnlFilterControl"); 
 	pnlFilterControl.FilterControl({}); 
-
+	
+	
 	var ctrlActivitySummaryView = $("#ctrlActivitySummaryView"); 
 	ctrlActivitySummaryView.ActivitySummaryViewControl({}); 
 	
@@ -12,45 +13,15 @@ $(document).ready(function ()
 		ImagePath: "./img/sample-images/CentralPark180px.jpg",
 		PriceStars: 4, 
 		Distance: "10 mi"
-	}
+	};
 	
 	ctrlActivitySummaryView.ActivitySummaryViewControl("Value", data);
 	
-	var getActivities = function ()
-	{
-		return $.ajax({
-			url: ActivityService.php,
-			type: "GET"		
-			async: true	
-		}); 
-	}
 	
-	var container = document.getElementById("container"); 
+	var ctrlActivitySummaryView2 = $("#summaryView2"); 
+	ctrlActivitySummaryView2.ActivitySummaryViewControl({}); 
 	
-	// comment added
-	
-	var button = $('<buttton>Click Here</button>'); 
-	button.appendTo(container); 
-	button.click(getActivities)
-		.done(function (data) {
-			
-			console.log(data); 
-		
-		}); ; 
+	ctrlActivitySummaryView2.ActivitySummaryViewControl("Value", data);
 
-
-
-/*	var data1 = {
-		ActivityName: "Grab a cold one",
-		LocationInfo: "<p>Bob's Bar</p><p>New Rochelle, NY</p>",
-		ImagePath: "./img/sample-images/180px-Belgian_beer_glass.jpg",
-		PriceStars: 4, 
-		Distance: "2 mi"
-	}
-	
-	var ctrlActivitySummaryView1 = $("#ctrlActivitySummaryView1"); 
-	ctrlActivitySummaryView1.ActivitySummaryViewControl({});
-	
-	ctrlActivitySummaryView1.ActivitySummaryViewControl("Value", data1);*/
 
 }); 
