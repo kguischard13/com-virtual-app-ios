@@ -21,6 +21,8 @@
 		497C7DC818DCB06F008EDD9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DAA18DCB06E008EDD9D /* UIKit.framework */; };
 		497C7DD018DCB06F008EDD9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DCE18DCB06F008EDD9D /* InfoPlist.strings */; };
 		497C7DD218DCB06F008EDD9D /* classroomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DD118DCB06F008EDD9D /* classroomTests.m */; };
+		499BEDE818F63464005C2FC0 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDE718F63464005C2FC0 /* Note.m */; };
+		499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		497C7DCD18DCB06F008EDD9D /* classroomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "classroomTests-Info.plist"; sourceTree = "<group>"; };
 		497C7DCF18DCB06F008EDD9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		497C7DD118DCB06F008EDD9D /* classroomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classroomTests.m; sourceTree = "<group>"; };
+		499BEDE618F62E5E005C2FC0 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		499BEDE718F63464005C2FC0 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		499BEDE918F6384E005C2FC0 /* LiveDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDiscussion.h; sourceTree = "<group>"; };
+		499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDiscussion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				497C7DBC18DCB06E008EDD9D /* ViewController.m */,
 				497C7DBE18DCB06F008EDD9D /* Images.xcassets */,
 				497C7DAD18DCB06E008EDD9D /* Supporting Files */,
+				499BEDE618F62E5E005C2FC0 /* Note.h */,
+				499BEDE718F63464005C2FC0 /* Note.m */,
+				499BEDE918F6384E005C2FC0 /* LiveDiscussion.h */,
+				499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */,
 			);
 			path = classroom;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 				497C7DBD18DCB06E008EDD9D /* ViewController.m in Sources */,
 				497C7DB718DCB06E008EDD9D /* AppDelegate.m in Sources */,
 				497C7DB318DCB06E008EDD9D /* main.m in Sources */,
+				499BEDE818F63464005C2FC0 /* Note.m in Sources */,
+				499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +470,7 @@
 				497C7DD718DCB06F008EDD9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		497C7DD818DCB06F008EDD9D /* Build configuration list for PBXNativeTarget "classroomTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +479,7 @@
 				497C7DDA18DCB06F008EDD9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

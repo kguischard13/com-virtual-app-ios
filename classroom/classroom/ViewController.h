@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HomeViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate>
+{
+	
+    UILabel *lblCurrentLocation;
+    UITextView *txtViewLocation;
+    UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
+    NSManagedObjectContext *managedObjectContext; // pointer to the object context
+}
 
-@end
+@property(nonatomic, retain) UILabel *lblCurrentLocation;
+@property(nonatomic, retain) UITextView *txtViewLocation;
+@property(nonatomic, retain) UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
+@property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
