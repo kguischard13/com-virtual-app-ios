@@ -23,6 +23,7 @@
 		497C7DD218DCB06F008EDD9D /* classroomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DD118DCB06F008EDD9D /* classroomTests.m */; };
 		499BEDE818F63464005C2FC0 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDE718F63464005C2FC0 /* Note.m */; };
 		499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */; };
+		499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDF018F74AF6005C2FC0 /* NoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,9 @@
 		499BEDE718F63464005C2FC0 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		499BEDE918F6384E005C2FC0 /* LiveDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDiscussion.h; sourceTree = "<group>"; };
 		499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDiscussion.m; sourceTree = "<group>"; };
+		499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		499BEDF018F74AF6005C2FC0 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		499BEDF218F74CD4005C2FC0 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,9 @@
 		497C7D9A18DCB06E008EDD9D = {
 			isa = PBXGroup;
 			children = (
+				499BEDF218F74CD4005C2FC0 /* Enums.h */,
+				499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */,
+				499BEDF018F74AF6005C2FC0 /* NoteViewController.m */,
 				497C7DAC18DCB06E008EDD9D /* classroom */,
 				497C7DCB18DCB06F008EDD9D /* classroomTests */,
 				497C7DA518DCB06E008EDD9D /* Frameworks */,
@@ -263,6 +270,7 @@
 				497C7DB718DCB06E008EDD9D /* AppDelegate.m in Sources */,
 				497C7DB318DCB06E008EDD9D /* main.m in Sources */,
 				499BEDE818F63464005C2FC0 /* Note.m in Sources */,
+				499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */,
 				499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

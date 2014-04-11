@@ -1,14 +1,15 @@
 //
-//  ViewController.h
+//  NoteViewController.h
 //  classroom
 //
-//  Created by Christopher Forehand on 3/21/14.
+//  Created by Christopher Forehand on 4/10/14.
 //  Copyright (c) 2014 Christopher Forehand. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Enums.h"
 
-@interface HomeViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate>
+@interface NoteViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate>
 {
 	
     UILabel *lblCurrentLocation;
@@ -22,3 +23,4 @@
 @property(nonatomic, retain) UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
 @property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
+@end
