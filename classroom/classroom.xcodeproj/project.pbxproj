@@ -13,7 +13,6 @@
 		497C7DB118DCB06E008EDD9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DAF18DCB06E008EDD9D /* InfoPlist.strings */; };
 		497C7DB318DCB06E008EDD9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DB218DCB06E008EDD9D /* main.m */; };
 		497C7DB718DCB06E008EDD9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DB618DCB06E008EDD9D /* AppDelegate.m */; };
-		497C7DBA18DCB06E008EDD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DB818DCB06E008EDD9D /* Main.storyboard */; };
 		497C7DBD18DCB06E008EDD9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DBC18DCB06E008EDD9D /* ViewController.m */; };
 		497C7DBF18DCB06F008EDD9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DBE18DCB06F008EDD9D /* Images.xcassets */; };
 		497C7DC618DCB06F008EDD9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DC518DCB06F008EDD9D /* XCTest.framework */; };
@@ -247,7 +246,6 @@
 			files = (
 				497C7DBF18DCB06F008EDD9D /* Images.xcassets in Resources */,
 				497C7DB118DCB06E008EDD9D /* InfoPlist.strings in Resources */,
-				497C7DBA18DCB06E008EDD9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@
 
 @implementation NoteViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
     if(self == [super init])
     {
