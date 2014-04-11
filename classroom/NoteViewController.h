@@ -18,7 +18,7 @@
     NSManagedObjectContext *managedObjectContext; // pointer to the object context
 }
 
-@property(nonatomic, retain) IBOutlet UILabel *lblCurrentLocation;
+@property(nonatomic, retain) UILabel *lblCurrentLocation;
 @property(nonatomic, retain) UITextView *txtViewLocation;
 @property(nonatomic, retain) UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
 @property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
