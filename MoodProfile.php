@@ -47,13 +47,17 @@
             $q = "SELECT * FROM User_has_mood";
             $qres = mysqli_query($dblink, $q)
                 or die(mysqli_error($dblink));
+
+            // execute query that retrieves entries from User_has_activity table
+            $q = "SELECT * FROM User_has_mood";
+            $qres = mysqli_query($dblink, $q)
+                or die(mysqli_error($dblink));
         ?>
 
         <!-- mood profile -->
         
         <div class="page-content">
-        	<div id="welcome-mood">
-        		<h1 id="header-text">Mood Profile</h1>
+        	<h1 id="header-text">Mood Profile</h1>
 				<table id="mview">
 				    <tr>
                         <th>Your mood</th>
@@ -86,12 +90,13 @@
                     }
                     ?>
 				</table>		   
-			</div> 
+            
             <br>
-            <div id="welcome-mood">
-                <a href="./EmotionSelection.php"><h1 id="header-text">Return to Emotion Selection</h1></a>
-            </div>      
-        </div>      
+            <a href="./UserPreferences.php"><h1 id="header-text">User Preferences</h1></a>
+            <br>
+            <a href="./EmotionSelection.php"><h1 id="header-text">Return to Emotion Selection</h1></a> 
+            
+            </div>          
 
         <div id="footer"></div>
 
