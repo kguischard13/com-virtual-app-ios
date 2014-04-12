@@ -11,11 +11,13 @@
 
 #import "NoteViewController.h"
 
-@interface NoteViewController ()
-
-@end
 
 @implementation NoteViewController
+
+@synthesize lblCurrentLocation;
+@synthesize txtViewLocation;
+@synthesize btnSubmitComp, viewMyLocation, btnViewComps, btnViewRecos;
+@synthesize managedObjectContext;
 
 - (id)init
 {

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BAF430618F88930004B3F4D /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F718F88930004B3F4D /* Comment.m */; };
+		2BAF430718F88930004B3F4D /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F918F88930004B3F4D /* Course.m */; };
+		2BAF430818F88930004B3F4D /* CourseSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FB18F88930004B3F4D /* CourseSession.m */; };
+		2BAF430918F88930004B3F4D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FD18F88930004B3F4D /* Note.m */; };
+		2BAF430A18F88930004B3F4D /* LiveDiscussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FF18F88930004B3F4D /* LiveDiscussion.m */; };
+		2BAF430B18F88930004B3F4D /* NoteElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF430118F88930004B3F4D /* NoteElement.m */; };
+		2BAF430C18F88930004B3F4D /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF430318F88930004B3F4D /* Question.m */; };
+		2BAF430D18F88930004B3F4D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF430518F88930004B3F4D /* User.m */; };
 		497C7DA718DCB06E008EDD9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DA618DCB06E008EDD9D /* Foundation.framework */; };
 		497C7DA918DCB06E008EDD9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DA818DCB06E008EDD9D /* CoreGraphics.framework */; };
 		497C7DAB18DCB06E008EDD9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DAA18DCB06E008EDD9D /* UIKit.framework */; };
@@ -20,8 +28,6 @@
 		497C7DC818DCB06F008EDD9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C7DAA18DCB06E008EDD9D /* UIKit.framework */; };
 		497C7DD018DCB06F008EDD9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DCE18DCB06F008EDD9D /* InfoPlist.strings */; };
 		497C7DD218DCB06F008EDD9D /* classroomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DD118DCB06F008EDD9D /* classroomTests.m */; };
-		499BEDE818F63464005C2FC0 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDE718F63464005C2FC0 /* Note.m */; };
-		499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */; };
 		499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDF018F74AF6005C2FC0 /* NoteViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +42,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BAF42F618F88930004B3F4D /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		2BAF42F718F88930004B3F4D /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		2BAF42F818F88930004B3F4D /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		2BAF42F918F88930004B3F4D /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		2BAF42FA18F88930004B3F4D /* CourseSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseSession.h; sourceTree = "<group>"; };
+		2BAF42FB18F88930004B3F4D /* CourseSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseSession.m; sourceTree = "<group>"; };
+		2BAF42FC18F88930004B3F4D /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		2BAF42FD18F88930004B3F4D /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		2BAF42FE18F88930004B3F4D /* LiveDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDiscussion.h; sourceTree = "<group>"; };
+		2BAF42FF18F88930004B3F4D /* LiveDiscussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDiscussion.m; sourceTree = "<group>"; };
+		2BAF430018F88930004B3F4D /* NoteElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteElement.h; sourceTree = "<group>"; };
+		2BAF430118F88930004B3F4D /* NoteElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteElement.m; sourceTree = "<group>"; };
+		2BAF430218F88930004B3F4D /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		2BAF430318F88930004B3F4D /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		2BAF430418F88930004B3F4D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2BAF430518F88930004B3F4D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		497C7DA318DCB06E008EDD9D /* classroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497C7DA618DCB06E008EDD9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		497C7DA818DCB06E008EDD9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,12 +77,8 @@
 		497C7DCD18DCB06F008EDD9D /* classroomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "classroomTests-Info.plist"; sourceTree = "<group>"; };
 		497C7DCF18DCB06F008EDD9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		497C7DD118DCB06F008EDD9D /* classroomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classroomTests.m; sourceTree = "<group>"; };
-		499BEDE618F62E5E005C2FC0 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		499BEDE718F63464005C2FC0 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		499BEDE918F6384E005C2FC0 /* LiveDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDiscussion.h; sourceTree = "<group>"; };
-		499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDiscussion.m; sourceTree = "<group>"; };
-		499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
-		499BEDF018F74AF6005C2FC0 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteViewController.h; path = ../NoteViewController.h; sourceTree = "<group>"; };
+		499BEDF018F74AF6005C2FC0 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteViewController.m; path = ../NoteViewController.m; sourceTree = "<group>"; };
 		499BEDF218F74CD4005C2FC0 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,13 +106,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BAF42F518F88903004B3F4D /* DataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2BAF42F618F88930004B3F4D /* Comment.h */,
+				2BAF42F718F88930004B3F4D /* Comment.m */,
+				2BAF42F818F88930004B3F4D /* Course.h */,
+				2BAF42F918F88930004B3F4D /* Course.m */,
+				2BAF42FA18F88930004B3F4D /* CourseSession.h */,
+				2BAF42FB18F88930004B3F4D /* CourseSession.m */,
+				2BAF42FC18F88930004B3F4D /* Note.h */,
+				2BAF42FD18F88930004B3F4D /* Note.m */,
+				2BAF42FE18F88930004B3F4D /* LiveDiscussion.h */,
+				2BAF42FF18F88930004B3F4D /* LiveDiscussion.m */,
+				2BAF430018F88930004B3F4D /* NoteElement.h */,
+				2BAF430118F88930004B3F4D /* NoteElement.m */,
+				2BAF430218F88930004B3F4D /* Question.h */,
+				2BAF430318F88930004B3F4D /* Question.m */,
+				2BAF430418F88930004B3F4D /* User.h */,
+				2BAF430518F88930004B3F4D /* User.m */,
+			);
+			name = DataClasses;
+			sourceTree = "<group>";
+		};
 		497C7D9A18DCB06E008EDD9D = {
 			isa = PBXGroup;
 			children = (
 				499BEDF218F74CD4005C2FC0 /* Enums.h */,
-				499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */,
-				499BEDF018F74AF6005C2FC0 /* NoteViewController.m */,
 				497C7DAC18DCB06E008EDD9D /* classroom */,
+				2BAF42F518F88903004B3F4D /* DataClasses */,
 				497C7DCB18DCB06F008EDD9D /* classroomTests */,
 				497C7DA518DCB06E008EDD9D /* Frameworks */,
 				497C7DA418DCB06E008EDD9D /* Products */,
@@ -126,15 +166,13 @@
 			children = (
 				497C7DB518DCB06E008EDD9D /* AppDelegate.h */,
 				497C7DB618DCB06E008EDD9D /* AppDelegate.m */,
+				499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */,
+				499BEDF018F74AF6005C2FC0 /* NoteViewController.m */,
 				497C7DB818DCB06E008EDD9D /* Main.storyboard */,
 				497C7DBB18DCB06E008EDD9D /* ViewController.h */,
 				497C7DBC18DCB06E008EDD9D /* ViewController.m */,
 				497C7DBE18DCB06F008EDD9D /* Images.xcassets */,
 				497C7DAD18DCB06E008EDD9D /* Supporting Files */,
-				499BEDE618F62E5E005C2FC0 /* Note.h */,
-				499BEDE718F63464005C2FC0 /* Note.m */,
-				499BEDE918F6384E005C2FC0 /* LiveDiscussion.h */,
-				499BEDEA18F638CA005C2FC0 /* LiveDiscussion.m */,
 			);
 			path = classroom;
 			sourceTree = "<group>";
@@ -264,12 +302,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAF430A18F88930004B3F4D /* LiveDiscussion.m in Sources */,
 				497C7DBD18DCB06E008EDD9D /* ViewController.m in Sources */,
 				497C7DB718DCB06E008EDD9D /* AppDelegate.m in Sources */,
 				497C7DB318DCB06E008EDD9D /* main.m in Sources */,
-				499BEDE818F63464005C2FC0 /* Note.m in Sources */,
+				2BAF430B18F88930004B3F4D /* NoteElement.m in Sources */,
+				2BAF430618F88930004B3F4D /* Comment.m in Sources */,
+				2BAF430718F88930004B3F4D /* Course.m in Sources */,
+				2BAF430818F88930004B3F4D /* CourseSession.m in Sources */,
+				2BAF430D18F88930004B3F4D /* User.m in Sources */,
+				2BAF430C18F88930004B3F4D /* Question.m in Sources */,
 				499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */,
-				499BEDEB18F638CA005C2FC0 /* LiveDiscussion.m in Sources */,
+				2BAF430918F88930004B3F4D /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
