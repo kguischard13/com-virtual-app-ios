@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Apr 15, 2014 at 01:59 AM
+-- Generation Time: Apr 15, 2014 at 02:44 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.5.10
 
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `Activity`
 --
 
-USE appdoodah;
+Use appdoodah; 
 
 CREATE TABLE `Activity` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -35,7 +35,7 @@ CREATE TABLE `Activity` (
   `ActivityDate` datetime NOT NULL,
   `VenueName` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `Activity`
@@ -43,7 +43,9 @@ CREATE TABLE `Activity` (
 
 INSERT INTO `Activity` (`Id`, `Name`, `Cost`, `City`, `State`, `Zip`, `LocationType`, `PopularityIndex`, `Description`, `ActivityDate`, `VenueName`) VALUES
 (1, 'Grab a Drink', 'Medium', 'New Rochelle', 'NY', '10801', 'Public', '10', 'Usually achieved at a local bar or in the com', '0000-00-00 00:00:00', 'Bar, Home'),
-(2, 'Go to the Movies', 'Medium', 'White Plains', 'NY', '10604', 'Public', '9', 'Watch a movie at the theater', '0000-00-00 00:00:00', 'Movie Theater');
+(2, 'Go to the Movies', 'Medium', 'White Plains', 'NY', '10604', 'Public', '9', 'Watch a movie at the theater', '0000-00-00 00:00:00', 'Movie Theater'),
+(3, 'Walk in the park', 'Free', 'New York', 'NY', '10019', 'Public ', '10', 'Huge park in the middle of NYC!', '2014-05-01 00:00:00', 'Park'),
+(4, 'Bike on a trail', 'Free', 'New Rochelle', 'NY', '10801', 'Public', '7', 'Nature Study backwoods trail, travel through ', '2014-05-01 00:00:00', 'Nature Study Woods');
 
 -- --------------------------------------------------------
 
@@ -58,6 +60,26 @@ CREATE TABLE `Activity_has_Mood` (
   KEY `fk_Activity_has_Mood_Mood1_idx` (`Mood_Id`),
   KEY `fk_Activity_has_Mood_Activity1_idx` (`Activity_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Activity_has_Mood`
+--
+
+INSERT INTO `Activity_has_Mood` (`Activity_Id`, `Mood_Id`) VALUES
+(3, 2),
+(3, 3),
+(1, 4),
+(4, 4),
+(1, 6),
+(2, 6),
+(3, 6),
+(4, 6),
+(1, 7),
+(2, 7),
+(3, 7),
+(1, 8),
+(1, 9),
+(3, 9);
 
 -- --------------------------------------------------------
 
@@ -86,7 +108,22 @@ CREATE TABLE `Mood` (
   `Name` varchar(45) DEFAULT NULL,
   `Category` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `Mood`
+--
+
+INSERT INTO `Mood` (`Id`, `Name`, `Category`) VALUES
+(1, 'Afraid', NULL),
+(2, 'Angry', NULL),
+(3, 'Anxious', NULL),
+(4, 'Confident', NULL),
+(5, 'Dread', NULL),
+(6, 'Happy', NULL),
+(7, 'Lonely', NULL),
+(8, 'Regret', NULL),
+(9, 'Sad', NULL);
 
 -- --------------------------------------------------------
 
@@ -121,7 +158,14 @@ CREATE TABLE `User` (
   `Password` varchar(45) DEFAULT NULL,
   `DateAdded` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`Id`, `FirstName`, `LastName`, `Email`, `UserName`, `Password`, `DateAdded`) VALUES
+(1, 'chris', 'forehand', 'cforehand@iona.edu', 'cforehand', 'test', NULL);
 
 -- --------------------------------------------------------
 
@@ -133,7 +177,28 @@ CREATE TABLE `UserPreferences` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `UserPreferences`
+--
+
+INSERT INTO `UserPreferences` (`Id`, `Name`) VALUES
+(1, 'Shopping'),
+(2, 'Football'),
+(3, 'Basketball'),
+(4, 'Baseball'),
+(5, 'Golf'),
+(6, 'Tennis'),
+(7, 'Golf'),
+(8, 'Bowling'),
+(9, 'Drink'),
+(10, 'Outdoors'),
+(11, 'Movies'),
+(12, 'Video games'),
+(13, 'Music events'),
+(14, 'Eating out'),
+(15, 'Leisure reading');
 
 -- --------------------------------------------------------
 
@@ -144,12 +209,12 @@ CREATE TABLE `UserPreferences` (
 CREATE TABLE `User_has_Activity` (
   `User_Id` int(11) NOT NULL,
   `Activity_Id` int(11) NOT NULL,
-  `IsCompleted` tinyint(1) NOT NULL,
-  `DateCompleted` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`User_Id`,`Activity_Id`),
-  KEY `fk_User_has_Activity_Activity1_idx` (`Activity_Id`),
-  KEY `fk_User_has_Activity_User_idx` (`User_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `IsCompleted` varchar(10) DEFAULT NULL,
+  `DateCompleted` datetime NOT NULL,
+  PRIMARY KEY (`DateCompleted`,`User_Id`,`Activity_Id`),
+  KEY `Id_idx` (`Activity_Id`),
+  KEY `User_Id` (`User_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -210,8 +275,8 @@ ALTER TABLE `Rating`
 -- Constraints for table `User_has_Activity`
 --
 ALTER TABLE `User_has_Activity`
-  ADD CONSTRAINT `fk_User_has_Activity_Activity1` FOREIGN KEY (`Activity_Id`) REFERENCES `Activity` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_User_has_Activity_User` FOREIGN KEY (`User_Id`) REFERENCES `User` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `User_Id` FOREIGN KEY (`User_Id`) REFERENCES `User` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `Activity_Id` FOREIGN KEY (`Activity_Id`) REFERENCES `Activity` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `User_has_Mood`
