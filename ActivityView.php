@@ -12,15 +12,18 @@
 		<script type="text/javascript" src="./js/Enums.js"></script>	
 		<script type="text/javascript" src="./js/Services/ActivityService.js"></script>			
 		<script type="text/javascript" src="./js/js_global.js"></script>			
-		<script type="text/javascript" src="./js/HomeView.js"></script>
-		<script type="text/javascript" src="./js/ActivityView.js"></script>
+		<script type="text/javascript" src="./js/ViewScripts/HomeView.js"></script>
+		<script type="text/javascript" src="./js/ViewScripts/ActivityView.js"></script>
 		<script type="text/javascript" src="./js/Controls/FilterControl.js"></script>
 		<script type="text/javascript" src="./js/Controls/ActivitySummaryViewControl.js"></script>
+		<script type="text/javascript" src="./js/Controls/ActivityListControl.js"></script>
 		<link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/General.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/ActivityView.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/FilterControl.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/ActivitySummaryViewControl.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/ActivityListViewControl.css"/>
+
 	</head>
 
 	<body>
@@ -56,7 +59,6 @@
 						<div id="ctrlActivitySummaryView" class="activity-list-item"></div>
 						<div id="summaryView2" class="activity-list-item"></div>
 					</div>
-					<button id="btnActivities">GetActivities</button>
 			</div>
 		</div>
 		<div id="footer" class="footer">

@@ -8,7 +8,7 @@
         <title>Doo-Dah - Login</title>
         <script src="./js/jquery-1.11.0.js"></script>
         <script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
-        <script type="text/javascript" src="./js/HomeView.js"></script>
+        <script type="text/javascript" src="./js/ViewScriptsHomeView.js"></script>
 		<link rel="stylesheet" type="text/css" href="./css/General.css"/>
         <link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
         <link rel="stylesheet" type="text/css" href="./css/LoginView.css"/>
@@ -44,11 +44,11 @@
             <table>
                 <tr>
                     <td>Username:</td>
-                    <td><textarea name="username" rows="1" cols="30" placeholder="Enter username"></textarea></td>
+                    <td><input style="width: 175px;" type="text" placeholder="Enter username"></input></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><textarea name="password" rows="1" cols="30" placeholder="Enter password"></textarea></td>
+                    <td><input style="width: 175px;" type="password" placeholder="Enter password"></input></td>
                 </tr>
                 <tr>
                     <td></td>

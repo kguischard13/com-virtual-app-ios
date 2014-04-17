@@ -5,7 +5,7 @@
 	$port = '8889'; 
 	$username = 'root';
 	$password = 'root';
-	$dbname = 'app-doo-dah';
+	$dbname = 'appdoodah';
 	$dbPrefix = '';
 	$siteDir = dirname(__FILE__);
 ?>

@@ -15,7 +15,7 @@
         <title>Doo-Dah - Mood Selection</title>
         <script src="./js/jquery-1.11.0.js"></script>
         <script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
-        <script type="text/javascript" src="./js/HomeView.js"></script>
+        <script type="text/javascript" src="./js/ViewScripts/HomeView.js"></script>
         <link rel="stylesheet" type="text/css" href="./css/General.css"/>
         <link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
         <link rel="stylesheet" type="text/css" href="./css/EmotionSelectionView.css"/>

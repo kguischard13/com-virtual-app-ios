@@ -1,6 +1,6 @@
 .emotion-registration-control
 {
-
+	position: relative; 
 }
 
 .emotion-registration-control .pnl-container
@@ -13,19 +13,21 @@
 
 .emotion-registration-control .reg-form-label
 {
-	display: block; 
-	height: 82px; 
-	font-weight: bold; 
-	font-size: 18px; 
-	width: 375px; 
+	display: block;
+	/* height: 82px; */
+	font-weight: bold;
+	font-size: 18px;
+	width: auto;
+	padding-bottom: 20px;
 }
 
 .emotion-registration-control .reg-form-input
 {
 	position: absolute;
-	left: 649px;
+	left: 378px;
 	width: 250px;
-	height: 30px;
+	/* height: 30px; */
+	/* padding-bottom: 5px; */
 	font-size: 14px;
 }
 

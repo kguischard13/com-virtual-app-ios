@@ -1,6 +1,18 @@
-var DooDah = window.DooDah || {}; 
+/*
 
-(function ($, dd)
+\brief This is a jQuery widget written in JavaScript for Registration Control
+\author Chris Forehand
+\date 3/20/14
+\verbatim
+	Test Cases: 
+	
+\endverbatim
+
+*/
+
+var VirtualClass = window.VirtualClass || {}; 
+
+(function ($, vc, undefined)
 {
     //  ------------------------------------------------------------------------------------------------
     // Options for the widget
@@ -8,6 +20,7 @@ var DooDah = window.DooDah || {};
     
     var _options = {
         DataManager: null,
+        IsLoginControl: false
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -17,7 +30,6 @@ var DooDah = window.DooDah || {};
     {
         var self = this;
         var elm = self.element;
-        var options = self.options;
         
         var _strings = {
         	LabelFirstName: "First Name:",
@@ -25,16 +37,23 @@ var DooDah = window.DooDah || {};
         	LabelEmail: "Email:",
         	LabelUserName: "Username:",
         	LabelPassword: "Password:",
-        	ButtonSubmit: "Register", 
-        	ButtonCancel: "Cancel"
+        	ButtonRegister: "Register", 
+        	ButtonCancel: "Cancel",
+        	ButtonLogin: "Login"
         }; 
 
         //  ------------------------------------------------------------------------------------------------
         // Instance (global) variables.
         //  ------------------------------------------------------------------------------------------------
  
-        var _foo = options.Foo;
-
+        var _isLoginControl = self.options.IsLoginControl; 
+        var _dataManager = self.options.DataManager; 
+        
+        /*if(_dataManager == null)
+    	{
+    		throw new Error ("Data manager is required"); 
+    	}*/
+        
         //  ------------------------------------------------------------------------------------------------
         // UI elements.
         //  ------------------------------------------------------------------------------------------------        
@@ -52,6 +71,9 @@ var DooDah = window.DooDah || {};
         var pnlButtonContainer = null; 
         var btnSubmit = null; 
         var btnCancel = null; 
+        var pnlForgotPassword = null; 
+        var lnkForgotPassword = null; 
+        var lnkRegisterAccount = null; 
         
         //  ------------------------------------------------------------------------------------------------
         // Initialization code.
@@ -121,18 +143,86 @@ var DooDah = window.DooDah || {};
             
             btnSubmit = $("<button id ='btnSubmit' type='button' />")
             	.addClass("btn-form")
-            	.html(_strings.ButtonSubmit)
+            	.click(btnSubmit_click)
             	.appendTo(pnlButtonContainer); 
             	
             btnCancel = $("<button id='btnCancel' type='button' />")
             	.addClass("btn-form")
             	.html(_strings.ButtonCancel)
-            	.appendTo(pnlButtonContainer);    	  	
+            	.appendTo(pnlButtonContainer);  
+            
+            pnlForgotPassword = $("<div />")
+            	.addClass("pnl-forgot-password")
+            	.appendTo(pnlContainer); 
+            
+            lnkRegisterAccount = $("<a href='#'>Register Account</a>")
+        	.addClass("lnk-register-account")
+        	.appendTo(pnlForgotPassword)
+        	.hide(); 
+            
+            lnkForgotPassword = $("<a href='#'>Forgot Password?</a>")
+            	.addClass("lnk-forgot-password")
+            	.appendTo(pnlForgotPassword)
+            	.hide(); 
+            
+            if(_isLoginControl)
+        	{
+            	lblFirstName.hide();
+            	lblLastName.hide(); 
+            	lblEmail.hide(); 
+            	lnkForgotPassword.show();
+            	lnkRegisterAccount.show();
+        	}
+            
+        	SetSubmitLabel(); 
         };
 
-        var txtFoo_click = function (evt)
+        var SetSubmitLabel = function ()
         {
-            alert("Click");
+        	if(_isLoginControl)
+        	{
+        		btnSubmit.html(_strings.ButtonLogin); 
+        	}
+        	else
+        	{
+        		btnSubmit.html(_strings.ButtonRegister); 
+        	}
+        }; 
+        
+        var btnSubmit_click = function ()
+        {
+            var username = txtUserName.val();
+            var password = txtPassword.val(); 
+        	
+        	var data =  { 
+            	Email: username,
+            	Password: password 
+            }; 
+        	
+        	var onSuccess = function (data, status, jqxhr)
+        	{
+        		window.location = jqxhr.getResponseHeader("Location"); 
+        	}; 
+        	
+        	var onError = function (jqxhr, data, err)
+        	{
+        		console.log(err);
+        	}; 
+        	
+        	
+        	return $.ajax({
+        		type: "POST", 
+        		url: _dataManager,
+        		async: true, 
+        		data: JSON.stringify(data),
+        		contentType: "application/json",
+        		success: onSuccess, 
+        		error: onError
+        	}); 
+        	        	
+//        	var url = "http://localhost:8080/app/user/login/{0}/{1}"; 
+//            url = url.replace("{0}", username).replace("{1}", password); 
+//            window.location = url;  
         };
 
         var Value = function ()
@@ -153,15 +243,14 @@ var DooDah = window.DooDah || {};
         {
             // Put the widget into some neutral state.
         };
-        
-        Init();
-        
+
         //  ------------------------------------------------------------------------------------------------
         // Public methods
         //  ------------------------------------------------------------------------------------------------
-        
         self.Value = Value;
         self.Clear = Clear;
+        
+        Init();
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -186,4 +275,4 @@ var DooDah = window.DooDah || {};
         _create: create,
         destroy: destroy
     });
-})(jQuery, DooDah);
+})(jQuery, VirtualClass);

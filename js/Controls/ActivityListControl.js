@@ -7,7 +7,8 @@ var DooDah = window.DooDah || {};
     //  ------------------------------------------------------------------------------------------------
     
     var _options = {
-        DataProvider: null
+        DataProvider: null,
+        ImagePath: "../img/sample-images/"
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -22,7 +23,7 @@ var DooDah = window.DooDah || {};
         var _strings = {
         	SortByText: "Sort Filters: ", 
         	PriceFilterText: "Price: ",
-        	DistanceFilterText: "Distance: ", 
+        	DistanceFilterText: "Distance", 
         	MoodFilterText: "Mood", 
         	LabelDoActivity: "Do it!"
         }; 
@@ -32,7 +33,11 @@ var DooDah = window.DooDah || {};
         //  ------------------------------------------------------------------------------------------------
  
         var _foo = options.Foo;
-
+        var _dataProvider = self.options.DataProvider != null ? self.options.DataProvider : DooDah.Services.ActivityService; 
+		var _imagePath = self.options.ImagePath; 
+		var _images = null; 
+		
+		
         //  ------------------------------------------------------------------------------------------------
         // UI elements.
         //  ------------------------------------------------------------------------------------------------        
@@ -48,8 +53,6 @@ var DooDah = window.DooDah || {};
         var pnlSnapshot = null;
         var pnlPrice = null; 
         var imgPrice = null; 
-        var pnlDistance = null; 
-        var lblDistance = null;  
         
         //  ------------------------------------------------------------------------------------------------
         // Initialization code.
@@ -57,78 +60,80 @@ var DooDah = window.DooDah || {};
         var Init = function ()
         {
             /// <summary>Initialize the widget's DOM elements.</summary>
-			elm.addClass("emotion-activity-summary-view-control"); 
+			elm.addClass("emotion-activity-list-view-control"); 
 			
             pnlContainer = $("<div></div>")
                 .addClass("pnl-container")
                 .appendTo(elm);
-                
-            pnlImageContainer = $("<div></div>")
-            	.addClass("pnl-image-container")
-            	.appendTo(pnlContainer); 
-            	
-            imgEventImage = $("<img></img>")
-            	.addClass("main-image-display")
-            	.appendTo(pnlImageContainer); 
-            	                            
-            pnlInfoContainer = $("<div></div>")
-            	.addClass("pnl-info-container")
-            	.appendTo(pnlContainer);
-            	               
-            pnlEventName = $("<div></div>")
-            	.addClass("pnl-event-name")
-            	.html("Event Name")
-            	.appendTo(pnlInfoContainer); 
-            	
-            pnlLocationInfo = $("<div></div>")
-            	.addClass("pnl-location-info")
-            	.appendTo(pnlInfoContainer); 
-
-            pnlDoActivity = $("<div></div>")
-            	.addClass("pnl-do-activity")
-            	.appendTo(pnlInfoContainer); 
-            	
-            var random = Math.floor((Math.random() * 1000) + 1); 
-            var name = "checkbox_" + random; 
-            	
-            chkDoActivity = $("<input type='checkbox' name='" + name + "'value='true' />") 
-            	.addClass("chk-do-activity")
-            	.appendTo(pnlInfoContainer); 
-            	
-            lblDoActivity = $("<label />")
-            	.addClass("lbl-do-activity")
-            	.html(_strings.LabelDoActivity)
-            	.prepend(chkDoActivity)
-            	.appendTo(pnlDoActivity); 
-            	
-            pnlSnapshot = $("<div></div>")
-            	.addClass("pnl-snapshot")
-            	.appendTo(pnlInfoContainer);
-            	
-            pnlPrice = $("<div></div>")
-            	.addClass("pnl-price-stars")
-            	.html(_strings.PriceFilterText)
-            	.appendTo(pnlSnapshot)
-            	
-            imgPrice = $("<img></img>")
-            	.addClass("price-image-display")
-            	.appendTo(pnlPrice);      
-				
-            pnlDistance = $("<div></div>")
-            	.addClass("pnl-distance")
-            	.appendTo(pnlSnapshot); 
         };
         
         var SetValue = function (value)
         {
-        	pnlEventName.html(value.Name);
+        	if(value.hasOwnProperty("ActivityName"))
+        	{
+        		pnlEventName.html(value.ActivityName);
+        	}
         	
-        	pnlLocationInfo.html("<p>" + value.VenueName + "</p>" + "<p>" + 
-        	value.City + "</p>" + "<p>" + value.State + "</p>");   
-        	pnlDistance.html("4.0 miles"); 	
-			imgPrice.attr("src", "./img/sample-images/47px-4-stars.png");
-			imgEventImage.attr("src", value.ImagePath); 
+        	if(value.hasOwnProperty("LocationInfo"))
+        	{
+        		pnlLocationInfo.html(value.LocationInfo);         	
+        	}
+        	
+        	if(value.hasOwnProperty("ImagePath"))
+        	{
+        	    imgEventImage.attr("src", value.ImagePath); 
+        	}
+        	
+        	if(value.hasOwnProperty("PriceStars"))
+        	{
+        		if(value.PriceStars === 4)
+        		{
+        			imgPrice.attr("src", "./img/sample-images/47px-4-stars.png"); 
+        		}
+        	}
+        	
+        	if(value.hasOwnProperty("Distance"))
+        	{
+        		pnlDistance.html("Distance: " + value.Distance); 
+        	}
+        		
         };
+        
+        
+        var LoadAsync = function ()
+        {
+        	if(_moodContext == null)
+        	{
+        		throw new Error("Mood Context is required"); 
+        	}
+        	
+        	var provider = _dataProvider; 
+        	
+        	provider.GetActivitiesForMood(_moodContext)
+        		.done(function (data, status) 
+        		{
+        			Fill(data); 
+        		}); 
+        }; 
+        
+        var Fill = function (data)
+        {
+        	$.each(data, function (i, item)
+        	{
+        		var id = item.Id; 
+        		
+        		var div = $('<div id=' + id + '></div>');
+        		div.addClass("list-item"); 
+        		var ctrlSummaryView = div.ActivitySummaryViewControl({}); 
+        		ctrlSummaryView.ActivitySummaryViewControl("Value", data[i]); 
+				pnlContainer.append(div);         	
+        	}); 
+        }
+        
+        var SetMoodContext = function (mood)
+        {
+        	_moodContext = mood; 
+        }
         
         var GetValue = function ()
         {
@@ -163,6 +168,8 @@ var DooDah = window.DooDah || {};
         //  ------------------------------------------------------------------------------------------------
         
         self.Value = Value; 
+        self.LoadAsync = LoadAsync; 
+        self.SetMoodContext = SetMoodContext; 
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -182,7 +189,7 @@ var DooDah = window.DooDah || {};
     //  ------------------------------------------------------------------------------------------------
     // Create the jQuery widget class
     //  ------------------------------------------------------------------------------------------------
-    $.widget("DooDah.ActivitySummaryViewControl", {
+    $.widget("DooDah.ActivityListViewControl", {
         options: _options,
         _create: create,
         destroy: destroy
