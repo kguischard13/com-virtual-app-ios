@@ -5,9 +5,12 @@ $(document).ready(function ()
 	
 	
 	var ctrlActivitySummaryView = $("#ctrlActivitySummaryView"); 
-	ctrlActivitySummaryView.ActivitySummaryViewControl({}); 
+	ctrlActivitySummaryView.ActivityListViewControl({}); 
 	
-	var data = {
+	ctrlActivitySummaryView.ActivityListViewControl("SetMoodContext", 6); 
+	ctrlActivitySummaryView.ActivityListViewControl("LoadAsync"); 
+	
+/*	var data = {
 		ActivityName: "Walk in the park",
 		LocationInfo: "<p>Central Park</p><p>New York, NY</p>",
 		ImagePath: "./img/sample-images/CentralPark180px.jpg",
@@ -27,13 +30,17 @@ $(document).ready(function ()
 	
 	btnActivities.click(function ()
 	{
-		return DooDah.Services.ActivityService.GetActivities()
+		return DooDah.Services.ActivityService.GetActivitiesForMood("hack")
 			.done(function (data) 
 			{
 				console.log(data); 
 			
+			})
+			.fail(function (data)
+			{
+				alert(data.responseText); 		
 			});
-	});  
+	}); */ 
 
 
 }); 
