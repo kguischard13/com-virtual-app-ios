@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "User.h"
 
 #define frameWidth self.view.frame.size.width
 #define frameHeight self.view.frame.size.height
@@ -99,6 +100,49 @@
 }
 
 -(void) LoginUser{
+    NSString *email = UserText.text;
+    NSString *password = PWordText.text;
+    
+    if ([email isEqualToString:@""] || [password isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Enter into both fields please" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        alert = nil;
+        return;
+    }
+    
+    NSString *str = [NSString stringWithFormat:@"http://localhost:8080/app/user/login/%@/password/%@", email, password ];
+    NSURL *url=[NSURL URLWithString:str];
+    NSData *data=[NSData dataWithContentsOfURL:url];
+    NSError *error=nil;
+    id response =[NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error:&error];
+    
+    
+    if(response != NULL){
+        NSDictionary *dataRes = response;
+        //NSLog(@"Account Type: %@", [dataRes objectForKey:@"Id"]);
+        
+        User* user = [[User alloc] init];
+        user.Id = [[dataRes objectForKey:@"Id"] intValue];
+        user.FirstName = [dataRes objectForKey:@"FirstName"];
+        user.LastName = [dataRes objectForKey:@"LastName"];
+        user.PhoneNumber = [dataRes objectForKey:@"PhoneNumber"];
+        user.Email = [dataRes objectForKey:@"Email"];
+        user.Password = [dataRes objectForKey:@"Password"];
+        
+        NSLog(@"Id: %d  First Name: %@  Last Name: %@   Phone Number: %@", user.Id, user.FirstName, user.LastName, user.PhoneNumber);
+        
+        //NSLog(@"Your JSON Object: %@ Or Error is: %@", response , error);
+        
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Incorrect, please enter again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        alert = nil;
+        return;
+    }
+    
+    UserText.text=@"";
+    PWordText.text = @"";
+    
     
 }
 
