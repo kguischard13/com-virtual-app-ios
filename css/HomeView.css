@@ -4,9 +4,7 @@ body
 	height: 100%;
 }
 
-/*
-Navigation Menu
-*/
+/***************Navigation Menu***************/
 
 #container
 {
@@ -54,6 +52,17 @@ Navigation Menu
 	padding-right: 10px;
 }
 
+#sub-menu a
+{
+	position: relative; 
+	z-index: 1; 
+}
+
+#sub-menu a:hover
+{
+	background-color: #FFFFCC; 
+}
+
 .top-level
 {
 	float: left; 
@@ -74,14 +83,15 @@ Navigation Menu
 
 #navigation #sub-menu
 {
-	position: absolute; 
-	text-align: left; 
-	background-color: white; 
-	padding: 0px; 
-	margin-top: 2px; 
-	color: gray; 
-	width: auto; 
-	right: 270px; 
+	position: absolute;
+	text-align: left;
+	background-color: white;
+	padding: 0px;
+	margin-top: 2px;
+	color: gray;
+	width: 172px;
+	height: auto;
+	z-index: 1; 
 }
 
 #how,
@@ -165,21 +175,7 @@ Navigation Menu
     width: 220px;
 }
 
-/*
-Main page content area
-*/
-
-.page-content
-{
-	margin-right: auto;
-	margin-left: auto; 
-	margin-top: auto;
-	margin-bottom: auto; 
-	width: 900px;
-	height: auto;
-	margin-top: 10px; 
-	background-color: white; 
-}
+/***********************Main page content area******************/
 
 .login-table
 {
@@ -205,7 +201,29 @@ h1
 	text-align: center; 
 }
 
+#image-strip
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	height: 200px;
+	padding-top: 20px;
+	width: 800px;
+}
+
 .footer
 {
 	text-align: center
+}
+
+.pnl-image-container
+{
+	position: relative; 
+	float: left; 
+}
+
+.home-image-display
+{
+	height: 200px; 
+	width: 200px; 
 }

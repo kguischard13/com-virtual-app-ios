@@ -126,6 +126,7 @@ var DooDah = window.DooDah || {};
         		div.addClass("list-item"); 
         		var ctrlSummaryView = div.ActivitySummaryViewControl({}); 
         		ctrlSummaryView.ActivitySummaryViewControl("Value", data[i]); 
+        		div.prop("tag", data[i]); 
 				pnlContainer.append(div);         	
         	}); 
         }

@@ -40,7 +40,7 @@
 								<ul id="sub-menu">
 									<li class="sub-level"><a href="./LoginView.php" id="login" title="Log in if you already have an account.">Login</a></li>
 									<li class="sub-level"><a href="./RegistrationView.php" id="new-user" title="New users, register here">Sign up</a></li>
-									<li class="sub-level"><a href="#" id="forgot-password" title="Forgot your password?">Forgot my password</a></li>
+									<li class="sub-level"><a href="#" id="forgot-password" title="Forgot your password?">Forgot password</a></li>
 
 								</ul>
 							</li>		
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 		<div id="footer" class="footer">
-			<p>Copyright 2014 Doo-Dah Inc</p>
+			<p>Copyright &#169; 2014 Doo-Dah, LLC</p>
 		</div>
 
 	</body>
