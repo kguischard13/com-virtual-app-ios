@@ -89,6 +89,12 @@
 	/*top: -20px;*/
 }
 
+.emotion-activity-summary-view-control .price-image-display
+{
+	max-width: 100%; 
+	height: 15px; 
+}
+
 .emotion-activity-summary-view-control .pnl-distance
 {
 	padding-left: 63px;
@@ -99,6 +105,13 @@
 	position: absolute;
 	height: 20px;
 	width: auto;
-	left: 147px;
-	top: 77px;
+	left: 211px;
+	top: 2px;
+	color: tomato;
+	font-size: 18px;
+}
+
+.emotion-activity-summary-view-control .chk-do-activity
+{
+	height: 14px;
 }

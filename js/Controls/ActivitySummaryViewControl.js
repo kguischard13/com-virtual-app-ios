@@ -91,7 +91,7 @@ var DooDah = window.DooDah || {};
             var random = Math.floor((Math.random() * 1000) + 1); 
             var name = "checkbox_" + random; 
             	
-            chkDoActivity = $("<input type='checkbox' name='" + name + "'value='true' />") 
+            chkDoActivity = $("<input type='checkbox' id='" + name + "'value='true' />") 
             	.addClass("chk-do-activity")
             	.appendTo(pnlInfoContainer); 
             	
@@ -121,14 +121,45 @@ var DooDah = window.DooDah || {};
         
         var SetValue = function (value)
         {
+        	chkDoActivity.prop("tag", value); 
         	pnlEventName.html(value.Name);
+        	pnlLocationInfo.html('<br>' + value.VenueName + '<br>' + value.City + ', ' + value.State + " " + value.Zip); 
         	
-        	pnlLocationInfo.html("<p>" + value.VenueName + "</p>" + "<p>" + 
-        	value.City + "</p>" + "<p>" + value.State + "</p>");   
-        	pnlDistance.html("4.0 miles"); 	
-			imgPrice.attr("src", "./img/sample-images/47px-4-stars.png");
+        	/*pnlLocationInfo.html("<p>" + value.VenueName + "</p>" + "<p>" + 
+        	value.City + "</p>" + "<p>" + value.State + "</p>");   */
+        	pnlDistance.html("4.0 miles");
+        	
+        	var price = value.Cost; 
+        	var src = GetPriceSource(price); 
+        	
+			imgPrice.attr("src", src);
 			imgEventImage.attr("src", value.ImagePath); 
         };
+        
+        var GetPriceSource = function (cost)
+        {
+        	var price = cost.toLowerCase(); 
+        	var src = ""; 
+        	
+        	if(price == "free")
+        	{
+        		pnlPrice.html(_strings.PriceFilterText + "Free"); 
+        	}
+        	else if (price == "medium")
+        	{
+        		src = "./img/sample-images/200px-3_stars.png"; 
+        	}
+        	else if (price == "low")
+        	{
+        		src = "./img/sample-images/200px-1_stars.png"; 
+        	}
+        	else if (price == "high")
+        	{
+        	    src = "./img/sample-images/200px-5_stars.png"; 
+        	}
+        	
+        	return src; 
+        }
         
         var GetValue = function ()
         {
