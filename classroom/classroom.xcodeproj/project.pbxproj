@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B658DAC1901A41800AF66E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DAB1901A41800AF66E4 /* LoginViewController.m */; };
 		2BAF430618F88930004B3F4D /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F718F88930004B3F4D /* Comment.m */; };
 		2BAF430718F88930004B3F4D /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F918F88930004B3F4D /* Course.m */; };
 		2BAF430818F88930004B3F4D /* CourseSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FB18F88930004B3F4D /* CourseSession.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B658DAA1901A41800AF66E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2B658DAB1901A41800AF66E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2BAF42F618F88930004B3F4D /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		2BAF42F718F88930004B3F4D /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		2BAF42F818F88930004B3F4D /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				497C7DB618DCB06E008EDD9D /* AppDelegate.m */,
 				499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */,
 				499BEDF018F74AF6005C2FC0 /* NoteViewController.m */,
+				2B658DAA1901A41800AF66E4 /* LoginViewController.h */,
+				2B658DAB1901A41800AF66E4 /* LoginViewController.m */,
 				497C7DB818DCB06E008EDD9D /* Main.storyboard */,
 				497C7DBB18DCB06E008EDD9D /* ViewController.h */,
 				497C7DBC18DCB06E008EDD9D /* ViewController.m */,
@@ -304,6 +309,7 @@
 			files = (
 				2BAF430A18F88930004B3F4D /* LiveDiscussion.m in Sources */,
 				497C7DBD18DCB06E008EDD9D /* ViewController.m in Sources */,
+				2B658DAC1901A41800AF66E4 /* LoginViewController.m in Sources */,
 				497C7DB718DCB06E008EDD9D /* AppDelegate.m in Sources */,
 				497C7DB318DCB06E008EDD9D /* main.m in Sources */,
 				2BAF430B18F88930004B3F4D /* NoteElement.m in Sources */,

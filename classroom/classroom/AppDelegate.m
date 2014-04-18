@@ -14,16 +14,18 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.noteViewController = [[NoteViewController alloc] init];
+    self.loginController = [[LoginViewController alloc] init];
     //self.homeViewController.managedObjectContext = [self managedObjectContext];
-	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.noteViewController];
-	self.navCtrl.delegate = self.noteViewController;
+	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.loginController];
+	self.navCtrl.delegate = self.loginController;
     
     [self.window 	setRootViewController: self.navCtrl];
     
+    [[UIApplication sharedApplication] setStatusBarHidden: YES];
+    
     [self.window makeKeyAndVisible];
     
-    [[UIApplication sharedApplication] setStatusBarHidden: NO];
+    
     
     return YES;
 }
