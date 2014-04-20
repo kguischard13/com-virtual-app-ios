@@ -1,179 +1,3 @@
-body
-{
-	background-color: #C5EDED; 
-	height: 100%;
-}
-
-/***************Navigation Menu***************/
-
-#container
-{
-	width: auto;
-	height:auto; 
-}
-
-#top-navigation
-{
-	margin-right: auto;
-	margin-left: auto; 
-	width: 100%;
-	height: 40px;
-	line-height: 39px;
-}
-
-#navigation
-{
-	height: 40px;
-	width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white; 
-	border-bottom: 1px solid gray; 
-}
-
-#nav-list
-{
-	width: auto;
-	height: 40px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -16px;
-}
-
-#navigation ul
-{
-	list-style-type: none; 
-}
-
-#navigation ul ul li
-{
-	border-bottom: 1px solid gray; 
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-#sub-menu a
-{
-	position: relative; 
-	z-index: 1; 
-}
-
-#sub-menu a:hover
-{
-	background-color: #FFFFCC; 
-}
-
-.top-level
-{
-	float: left; 
-	width: 20%; 
-}
-
-.top-level a
-{
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-#navigation ul li a
-{
-	color: #5C9696;
-	text-decoration: none; 
-}
-
-#navigation #sub-menu
-{
-	position: absolute;
-	text-align: left;
-	background-color: white;
-	padding: 0px;
-	margin-top: 2px;
-	color: gray;
-	width: 172px;
-	height: auto;
-	z-index: 1; 
-}
-
-#how,
-#emotions,
-#activities,
-#account, 
-#home, 
-#login, 
-#new-user,
-#forgot-password
-{
-	background-repeat: no-repeat; 
-	background-position: left; 
-	padding-left: 30px;
-}
-
-#home
-{
-	background-image: url(../img/home-icon_20x20.png); 
-}
-
-#how
-{
-	background-image: url(../img/info-icon_20x20.png); 
-}
-
-#emotions
-{
-	background-image: url(../img/emotions-icon_20x20.png); 
-}
-
-#activities
-{
-	background-image: url(../img/activity-icon4_20x20.png);
-}
-
-#account
-{
-	background-image: url(../img/user-icon_20x20.png);
-}
-
-#login
-{
-	background-image: url(../img/lock-icon_20x20.png);
-}
-
-#new-user
-{
-	background-image: url(../img/add-user-icon_20x20.png);
-}
-
-#forgot-password
-{
-	background-image: url(../img/question-icon_20x20.png);
-}
-
-
-#navigation a:hover
-{
-	background-color: #FFFFCC; 
-}
-
-.tooltip
-{
-    display: inline;
-    position: relative;
-}
-
-.tooltip:hover:after
-{
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: 26px;
-    color: #fff;
-    content: attr(title);
-    left: 20%;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 98;
-    width: 220px;
-}
 
 /***********************Main page content area******************/
 
@@ -183,15 +7,6 @@ body
 	margin-left: auto;
 	margin-right: auto; 
 	margin-top: 40px;  
-}
-
-h1
-{
-	color: #5C9696;
-	margin: 0px;
-	text-align: center;
-	padding-top: 22px;
-	position: relative;
 }
 
 .how-it-works
@@ -211,9 +26,14 @@ h1
 	width: 800px;
 }
 
-.footer
+.emotion-registration-control
 {
-	text-align: center
+	position: relative;
+	height: auto;
+	width: 379px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px; 
 }
 
 .pnl-image-container
