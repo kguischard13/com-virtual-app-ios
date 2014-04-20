@@ -8,7 +8,7 @@ $(document).ready(function ()
 	ctrlActivitySummaryView.ActivityListViewControl({}); 
 	
 	ctrlActivitySummaryView.ActivityListViewControl("SetMoodContext", 6); 
-	ctrlActivitySummaryView.ActivityListViewControl("LoadAsync"); 
+	ctrlActivitySummaryView.ActivityListViewControl("LoadAsync");
 	
 /*	var data = {
 		ActivityName: "Walk in the park",

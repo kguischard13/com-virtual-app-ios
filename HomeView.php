@@ -9,12 +9,15 @@
 		<script src="./js/jquery-1.11.0.js"></script>
 		<script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
 		<script type="text/javascript" src="./js/ViewScripts/HomeView.js"></script>
+		<script type="text/javascript" src="./js/ViewScripts/General.js"></script>
+		<script type="text/javascript" src="./js/Controls/RegistrationControl.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/RegistrationControl.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/HomeView.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/General.css"/>
 	</head>
 
 	<body>
-		<div id="container">
+	<!--	<div id="container">
 			<div id="top-navigation">
 				<div id="navigation">
 					<div id="nav-list">
@@ -35,12 +38,13 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		
 		<div class="page-content">
 			<div id="welcome">
 				<h1> Welcome to Doo-Dah!</h1>
 				<div id="image-strip"></div>
+				<div id="registrationControl"></div>
 				<!--<h1 id="header-text">Login to your account</h1>
 				<table class="login-table">
                 <tr>

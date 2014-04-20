@@ -10,9 +10,9 @@
 
 */
 
-var VirtualClass = window.VirtualClass || {}; 
+var DooDah = window.DooDah || {}; 
 
-(function ($, vc, undefined)
+(function ($, dd, undefined)
 {
     //  ------------------------------------------------------------------------------------------------
     // Options for the widget
@@ -20,7 +20,9 @@ var VirtualClass = window.VirtualClass || {};
     
     var _options = {
         DataManager: null,
-        IsLoginControl: false
+        IsLoginControl: false,
+        LinkRegistration: null, 
+        LinkForgotPassword: null
     };
 
     //  ------------------------------------------------------------------------------------------------
@@ -48,7 +50,9 @@ var VirtualClass = window.VirtualClass || {};
  
         var _isLoginControl = self.options.IsLoginControl; 
         var _dataManager = self.options.DataManager; 
-        
+        var _lnkRegistration = self.options.LinkRegistration != null ? self.options.LinkRegistration : '#'; 
+        var _lnkForgotPassword = self.options.LinkForgotPassword != null ? self.options.LinkForgotPassword : '#'; 
+      
         /*if(_dataManager == null)
     	{
     		throw new Error ("Data manager is required"); 
@@ -155,7 +159,7 @@ var VirtualClass = window.VirtualClass || {};
             	.addClass("pnl-forgot-password")
             	.appendTo(pnlContainer); 
             
-            lnkRegisterAccount = $("<a href='#'>Register Account</a>")
+            lnkRegisterAccount = $("<a href='" + _lnkRegistration + "'>Register Account</a>")
         	.addClass("lnk-register-account")
         	.appendTo(pnlForgotPassword)
         	.hide(); 
@@ -275,4 +279,4 @@ var VirtualClass = window.VirtualClass || {};
         _create: create,
         destroy: destroy
     });
-})(jQuery, VirtualClass);
+})(jQuery, DooDah);
