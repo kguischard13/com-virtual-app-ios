@@ -14,7 +14,7 @@
 
 @implementation LoginViewController
 
-@synthesize UserL, PWordL,UserText,PWordText,LoginBtn, CancelBtn;
+@synthesize UserL, PWordL,UserText,PWordText,LoginBtn, CancelBtn, mainmenuCtrl;
 
 -(id) init{
     if (self = [super init]) {
@@ -85,7 +85,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    mainmenuCtrl = [[MainMenuController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,20 +116,28 @@
     NSError *error=nil;
     id response =[NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error:&error];
     
+    User* loginuser = [[User alloc] init];
     
     if(response != NULL){
         NSDictionary *dataRes = response;
         //NSLog(@"Account Type: %@", [dataRes objectForKey:@"Id"]);
         
-        User* user = [[User alloc] init];
-        user.Id = [[dataRes objectForKey:@"Id"] intValue];
-        user.FirstName = [dataRes objectForKey:@"FirstName"];
-        user.LastName = [dataRes objectForKey:@"LastName"];
-        user.PhoneNumber = [dataRes objectForKey:@"PhoneNumber"];
-        user.Email = [dataRes objectForKey:@"Email"];
-        user.Password = [dataRes objectForKey:@"Password"];
         
-        NSLog(@"Id: %d  First Name: %@  Last Name: %@   Phone Number: %@", user.Id, user.FirstName, user.LastName, user.PhoneNumber);
+        loginuser.Id = [[dataRes objectForKey:@"Id"] intValue];
+        loginuser.FirstName = [dataRes objectForKey:@"FirstName"];
+        loginuser.LastName = [dataRes objectForKey:@"LastName"];
+        loginuser.PhoneNumber = [dataRes objectForKey:@"PhoneNumber"];
+        loginuser.Email = [dataRes objectForKey:@"Email"];
+        loginuser.Password = [dataRes objectForKey:@"Password"];
+        loginuser.AccountType = [dataRes objectForKey:@"AccountType"];
+        
+       
+        
+        /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:user.FirstName delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        alert = nil;*/
+        
+        //
         
         //NSLog(@"Your JSON Object: %@ Or Error is: %@", response , error);
         
@@ -142,6 +150,10 @@
     
     UserText.text=@"";
     PWordText.text = @"";
+    //push new view'
+     //NSLog(@"Id: %d  First Name: %@  Last Name: %@   Phone Number: %@  Account Type: %@\n", loginuser.Id, loginuser.FirstName, loginuser.LastName, loginuser.PhoneNumber, loginuser.AccountType);
+    mainmenuCtrl.currUser = loginuser;
+    [self.navigationController pushViewController: mainmenuCtrl animated:YES];
     
     
 }
