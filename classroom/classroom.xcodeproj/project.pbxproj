@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B658DAC1901A41800AF66E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DAB1901A41800AF66E4 /* LoginViewController.m */; };
 		2B658DAF1904828300AF66E4 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DAE1904828300AF66E4 /* MainMenuController.m */; };
+		2B658DB21904B1CE00AF66E4 /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DB11904B1CE00AF66E4 /* CourseViewController.m */; };
 		2BAF430618F88930004B3F4D /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F718F88930004B3F4D /* Comment.m */; };
 		2BAF430718F88930004B3F4D /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F918F88930004B3F4D /* Course.m */; };
 		2BAF430818F88930004B3F4D /* CourseSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FB18F88930004B3F4D /* CourseSession.m */; };
@@ -48,6 +49,8 @@
 		2B658DAB1901A41800AF66E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2B658DAD1904828300AF66E4 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
 		2B658DAE1904828300AF66E4 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
+		2B658DB01904B1CE00AF66E4 /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
+		2B658DB11904B1CE00AF66E4 /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
 		2BAF42F618F88930004B3F4D /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		2BAF42F718F88930004B3F4D /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		2BAF42F818F88930004B3F4D /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				2B658DAB1901A41800AF66E4 /* LoginViewController.m */,
 				2B658DAD1904828300AF66E4 /* MainMenuController.h */,
 				2B658DAE1904828300AF66E4 /* MainMenuController.m */,
+				2B658DB01904B1CE00AF66E4 /* CourseViewController.h */,
+				2B658DB11904B1CE00AF66E4 /* CourseViewController.m */,
 				497C7DB818DCB06E008EDD9D /* Main.storyboard */,
 				497C7DBB18DCB06E008EDD9D /* ViewController.h */,
 				497C7DBC18DCB06E008EDD9D /* ViewController.m */,
@@ -322,6 +327,7 @@
 				2BAF430618F88930004B3F4D /* Comment.m in Sources */,
 				2BAF430718F88930004B3F4D /* Course.m in Sources */,
 				2BAF430818F88930004B3F4D /* CourseSession.m in Sources */,
+				2B658DB21904B1CE00AF66E4 /* CourseViewController.m in Sources */,
 				2B658DAF1904828300AF66E4 /* MainMenuController.m in Sources */,
 				2BAF430D18F88930004B3F4D /* User.m in Sources */,
 				2BAF430C18F88930004B3F4D /* Question.m in Sources */,
