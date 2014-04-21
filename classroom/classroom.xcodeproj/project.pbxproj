@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B658DAC1901A41800AF66E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DAB1901A41800AF66E4 /* LoginViewController.m */; };
+		2B658DAF1904828300AF66E4 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B658DAE1904828300AF66E4 /* MainMenuController.m */; };
 		2BAF430618F88930004B3F4D /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F718F88930004B3F4D /* Comment.m */; };
 		2BAF430718F88930004B3F4D /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42F918F88930004B3F4D /* Course.m */; };
 		2BAF430818F88930004B3F4D /* CourseSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF42FB18F88930004B3F4D /* CourseSession.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		2B658DAA1901A41800AF66E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2B658DAB1901A41800AF66E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2B658DAD1904828300AF66E4 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
+		2B658DAE1904828300AF66E4 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
 		2BAF42F618F88930004B3F4D /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		2BAF42F718F88930004B3F4D /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		2BAF42F818F88930004B3F4D /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				2BAF430518F88930004B3F4D /* User.m */,
 			);
 			name = DataClasses;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		497C7D9A18DCB06E008EDD9D = {
@@ -136,7 +140,6 @@
 			children = (
 				499BEDF218F74CD4005C2FC0 /* Enums.h */,
 				497C7DAC18DCB06E008EDD9D /* classroom */,
-				2BAF42F518F88903004B3F4D /* DataClasses */,
 				497C7DCB18DCB06F008EDD9D /* classroomTests */,
 				497C7DA518DCB06E008EDD9D /* Frameworks */,
 				497C7DA418DCB06E008EDD9D /* Products */,
@@ -172,10 +175,17 @@
 				499BEDF018F74AF6005C2FC0 /* NoteViewController.m */,
 				2B658DAA1901A41800AF66E4 /* LoginViewController.h */,
 				2B658DAB1901A41800AF66E4 /* LoginViewController.m */,
+<<<<<<< HEAD
+=======
+				2B658DAD1904828300AF66E4 /* MainMenuController.h */,
+				2B658DAE1904828300AF66E4 /* MainMenuController.m */,
+				497C7DB818DCB06E008EDD9D /* Main.storyboard */,
+>>>>>>> FETCH_HEAD
 				497C7DBB18DCB06E008EDD9D /* ViewController.h */,
 				497C7DBC18DCB06E008EDD9D /* ViewController.m */,
 				497C7DBE18DCB06F008EDD9D /* Images.xcassets */,
 				497C7DAD18DCB06E008EDD9D /* Supporting Files */,
+				2BAF42F518F88903004B3F4D /* DataClasses */,
 			);
 			path = classroom;
 			sourceTree = "<group>";
@@ -314,6 +324,7 @@
 				2BAF430618F88930004B3F4D /* Comment.m in Sources */,
 				2BAF430718F88930004B3F4D /* Course.m in Sources */,
 				2BAF430818F88930004B3F4D /* CourseSession.m in Sources */,
+				2B658DAF1904828300AF66E4 /* MainMenuController.m in Sources */,
 				2BAF430D18F88930004B3F4D /* User.m in Sources */,
 				2BAF430C18F88930004B3F4D /* Question.m in Sources */,
 				499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */,
