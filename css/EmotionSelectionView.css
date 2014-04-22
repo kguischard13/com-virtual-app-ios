@@ -18,17 +18,12 @@ a:link
     text-decoration: none;
 }
 
-/* clicking mood buttons (i.e. links) will not change their appearance to a default visited link */
-a:visited
+#mblink
 {
-    color: #eeeeee;
+    text-align: center;
 }
 
-.button
-{
-    border-style: none;
-}
-
+/* 9 mood buttons (arranged alphabetically) */
 #mbutton-afraid
 {
     margin-right: auto;
@@ -128,7 +123,12 @@ a:visited
     background-image: url(../img/mb/sad.png);
 }
 
-/*  HOVER EFFECTS for mood buttons  */
+/*  hover effects */
+#mblink:hover
+{
+    color: #7EB8B8;
+}
+
 #mbutton-afraid:hover
 {
     border-style: inset;
