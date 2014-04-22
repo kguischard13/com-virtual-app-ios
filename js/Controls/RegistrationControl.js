@@ -53,15 +53,16 @@ var DooDah = window.DooDah || {};
         var _lnkRegistration = self.options.LinkRegistration != null ? self.options.LinkRegistration : '#'; 
         var _lnkForgotPassword = self.options.LinkForgotPassword != null ? self.options.LinkForgotPassword : '#'; 
       
-        /*if(_dataManager == null)
+        if(_dataManager == null)
     	{
     		throw new Error ("Data manager is required"); 
-    	}*/
+    	}
         
         //  ------------------------------------------------------------------------------------------------
         // UI elements.
         //  ------------------------------------------------------------------------------------------------        
         var pnlContainer = null;
+        var pnlErrorContainer = null; 
         var txtFirstName = null; 
         var lblFirstName = null; 
         var txtLastName = null; 
@@ -90,6 +91,10 @@ var DooDah = window.DooDah || {};
             pnlContainer = $("<div />")
                 .addClass("pnl-container")
                 .appendTo(elm);
+                
+            pnlErrorContainer = $("<div />")
+            	.addClass("pnl-error-container")
+            	.appendTo(pnlContainer); 
                 
             txtFirstName =$("<input type='text' />")
                 .addClass("reg-form-input")
@@ -193,40 +198,66 @@ var DooDah = window.DooDah || {};
         	}
         }; 
         
+        var ValidateInputs = function (credentials)
+        {
+        	var username = credentials.UserName; 
+        	var password = credentials.Password; 
+        	
+        	if(username == null || username === "")
+        	{
+        		pnlErrorContainer.html("Please enter a valid username!"); 
+        		return false; 
+        	}
+        	
+        	if(password == null || password == "")
+        	{
+        		pnlErrorContainer.html("Please enter a valid password!"); 
+        		return false;
+        	}
+        	
+        	return true; 	
+        }
+                
+        var ClearValidationPanel = function ()
+        {
+            pnlErrorContainer.html(""); 
+        }
+        
         var btnSubmit_click = function ()
         {
-            var username = txtUserName.val();
-            var password = txtPassword.val(); 
+            ClearValidationPanel(); 
+            
+            var username = $.trim(txtUserName.val());
+            var password = $.trim(txtPassword.val()); 
         	
-        	var data =  { 
-            	Email: username,
+        	var credentials =  { 
+            	UserName: username,
             	Password: password 
             }; 
-        	
-        	var onSuccess = function (data, status, jqxhr)
-        	{
-        		window.location = jqxhr.getResponseHeader("Location"); 
-        	}; 
-        	
-        	var onError = function (jqxhr, data, err)
-        	{
-        		console.log(err);
-        	}; 
-        	
-        	
-        	return $.ajax({
-        		type: "POST", 
-        		url: _dataManager,
-        		async: true, 
-        		data: JSON.stringify(data),
-        		contentType: "application/json",
-        		success: onSuccess, 
-        		error: onError
-        	}); 
-        	        	
-//        	var url = "http://localhost:8080/app/user/login/{0}/{1}"; 
-//            url = url.replace("{0}", username).replace("{1}", password); 
-//            window.location = url;  
+            
+            if(ValidateInputs(credentials))
+            {
+				var onSuccess = function (data, status, jqxhr)
+				{
+					window.location.href = data; 
+				}
+            
+				var onError = function (data, status, jqxhr)
+				{
+					console.log(data); 
+				}
+            
+				return $.ajax({
+					type: "POST", 
+					url: "./Login.php",
+					accepts: "text/html", 
+					async: true, 
+					data: credentials,
+					contentType: "application/x-www-form-urlencoded",
+					success: onSuccess, 
+					error: onError
+				});
+            }
         };
 
         var Value = function ()

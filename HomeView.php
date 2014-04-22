@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +8,7 @@
 		<title>Doo-Dah - Home</title>
 		<script src="./js/jquery-1.11.0.js"></script>
 		<script src="./js/jquery-ui-1.10.4/ui/jquery-ui.js"></script>
+		<script type="text/javascript" src="./js/Services/LoginService.js"></script>
 		<script type="text/javascript" src="./js/ViewScripts/HomeView.js"></script>
 		<script type="text/javascript" src="./js/ViewScripts/General.js"></script>
 		<script type="text/javascript" src="./js/Controls/RegistrationControl.js"></script>
