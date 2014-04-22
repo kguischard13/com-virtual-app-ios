@@ -19,7 +19,7 @@
 	</head>
 
 	<body>
-		<div id="container">
+		<!--<div id="container">
 			<div id="top-navigation">
 				<div id="navigation">
 					<div id="nav-list">
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		
 		<div class="page-content">
 			<div id="welcome-registration">
