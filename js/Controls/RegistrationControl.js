@@ -53,10 +53,10 @@ var DooDah = window.DooDah || {};
         var _lnkRegistration = self.options.LinkRegistration != null ? self.options.LinkRegistration : '#'; 
         var _lnkForgotPassword = self.options.LinkForgotPassword != null ? self.options.LinkForgotPassword : '#'; 
       
-        if(_dataManager == null)
+        /*if(_dataManager == null)
     	{
     		throw new Error ("Data manager is required"); 
-    	}
+    	}*/
         
         //  ------------------------------------------------------------------------------------------------
         // UI elements.
@@ -158,6 +158,7 @@ var DooDah = window.DooDah || {};
             btnCancel = $("<button id='btnCancel' type='button' />")
             	.addClass("btn-form")
             	.html(_strings.ButtonCancel)
+            	.click(btnCancel_click)
             	.appendTo(pnlButtonContainer);  
             
             pnlForgotPassword = $("<div />")
@@ -216,6 +217,11 @@ var DooDah = window.DooDah || {};
         	}
         	
         	return true; 	
+        }
+        
+        var btnCancel_click = function ()
+        {	
+        	window.location.href = "HomeView.php"; 
         }
                 
         var ClearValidationPanel = function ()
