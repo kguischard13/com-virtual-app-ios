@@ -31,6 +31,28 @@ a:link
     text-decoration: none;
 }
 
+#mplink
+{
+    text-align: center;
+}
+
+#rlink
+{
+    color:#888888;
+    font-size: 22px;
+}
+
+/*  hover effects */
+#mplink:hover
+{
+    color: #7EB8B8;
+}
+
+#rlink:hover
+{
+    color: #AAAAAA;
+}
+
 table#mview:hover
 {
     border-style: groove;
