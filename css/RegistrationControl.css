@@ -59,3 +59,12 @@
 {
 	margin-right: 10px; 
 }
+
+.emotion-registration-control .pnl-error-container
+{
+	position: relative;
+	height: 20px; 
+	width: 100%; 
+	color: red; 
+	padding-bottom: 10px; 
+}

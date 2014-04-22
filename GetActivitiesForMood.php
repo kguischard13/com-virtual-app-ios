@@ -12,7 +12,6 @@ include("Activity.php");
 	
 	if(!is_numeric($mood))
 		echo "Stop Trying to Hack Us";
-		
 				
 	$link = mysqli_connect($host, $username, $password, $dbname, $port);
 

@@ -39,7 +39,9 @@ $(document).ready(function(){
 	imageStrip.append(pnlImage1, pnlImage2, pnlImage3, pnlImage4); 
 	
 	var registrationControl = $('#registrationControl'); 
+	
 	registrationControl.RegistrationControl({
+		DataManager: DooDah.Services.LoginService,
 		IsLoginControl: true,
 		LinkRegistration: "./RegistrationView.php"
 	}); 
