@@ -1,4 +1,7 @@
 <?php
+
+include("UserMoods.php");
+
 session_start(); 
 if(!isset($_SESSION['UserId']))
 {
