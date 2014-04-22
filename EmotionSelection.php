@@ -1,18 +1,20 @@
 <?php
+
 session_start(); 
     if(isset($_SESSION['UserId']))
     {
     	include("const_db.inc");
-    	date_default_timezone_set('Australia/Melbourne');
+    	date_default_timezone_set('America/New_York');
 
 		// establish connection to db
-		$dblink = mysqli_connect('localhost', $username, $password, $dbname)
+		$dblink = mysqli_connect($host, $username, $password, $dbname, $port)
 			or die(mysqli_connect_error() . ' (Error: ' . mysqli_connect_errno() . ')');
     }
     else
     {
     	header("Location: Logout.php"); 
     }
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,62 +54,46 @@ session_start();
         <!-- mood buttons -->
         <div class="page-content">
             <h1 id="header-text">What mood are you in?</h1>
-                <form name="mbuttons" action="./ActivityView.php" method="POST">
+                <form name="mbuttons" action="./ActivityView.php" method="post">
                     <table>
                         <tr>
                             <td>
-                                <div id="mbutton-confident">
-                                    <input type="image" name="confident" value="confident" src="./img/mb/confident.png">
-                                </div>
+                                <input id="mbutton-confident" type="image" name="confident" value = "4" src="./img/mb/confident.png">
                             </td>
                             <td>
-                                <div id="mbutton-happy">
-                                    <input type="image" name="happy" value="happy" src="./img/mb/happy.png">
-                                </div>
+                                <input id="mbutton-happy" type="image" name="happy" value="6" src="./img/mb/happy.png">
                             </td>
                             <td>
-                                <div id="mbutton-anxious">
-                                    <input type="image" name="anxious" value="anxious" src="./img/mb/anxious.png">
-                                </div>
+                                <input id="mbutton-anxious" type="image" name="anxious" value="3" src="./img/mb/anxious.png">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div id="mbutton-afraid">
-                                    <input type="image" name="afraid" value="afraid" src="./img/mb/afraid.png">
-                                </div>
+                                <input id="mbutton-afraid" type="image" name="afraid" value="1" src="./img/mb/afraid.png">
                             </td>
                             <td>
-                                <div id="mbutton-angry">
-                                    <input type="image" name="angry" value="angry" src="./img/mb/angry.png">
-                                </div>
+                                <input id="mbutton-angry" type="image" name="anxious" value="2" src="./img/mb/angry.png">
                             </td>
                             <td>
-                                <div id="mbutton-dread">
-                                    <input type="image" name="dread" value="dread" src="./img/mb/dread.png">
-                                </div>
+                                <input id="mbutton-dread" type="image" name="dread" value="5" src="./img/mb/dread.png">
                             </td>
                         <tr>           
                             <td>
-                                <div id="mbutton-lonely">
-                                    <input type="image" name="lonely" value="lonely" src="./img/mb/lonely.png">
-                                </div>
+                                <input id="mbutton-lonely" type="image" name="lonely" value="7" src="./img/mb/lonely.png">
                             </td>
                             <td>
-                                <div id="mbutton-regret">
-                                    <input type="image" name="regret" value="regret" src="./img/mb/regret.png">
-                                </div>
+                                <input id="mbutton-regret" type="image" name="regret" value="8" src="./img/mb/regret.png">
                             </td>
                             <td>
-                                <div id="mbutton-sad">
-                                    <input type="image" name="sad" value="sad" src="./img/mb/sad.png">
-                                </div>
+                                <input id="mbutton-sad" type="image" name="sad" value="9" src="./img/mb/sad.png">
                             </td>
                         </tr>
-                    </table> 
+                    </table>
                 </form>
             <br>
-            <a href="./MoodProfile.php"><h1 id="header-text">Click here to view your mood profile</h1></a>        
+            
+            <a href="./MoodProfile.php"><h1 id="mblink">Click here to see your mood profile</h1></a>
+            
         </div>
 
         <div id="footer" class="footer">
@@ -115,52 +101,5 @@ session_start();
         </div>
 
     </body>
-
-    <?php
-        if (isset($_POST["afraid"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 1, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-        else if (isset($_POST["angry"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 2, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-        else if (isset($_POST["anxious"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 3, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-        else if (isset($_POST["confident"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 4, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-        else if (isset($_POST["dread"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 5, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-         else if (isset($_POST["happy"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 6, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-         else if (isset($_POST["lonely"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 7, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-         else if (isset($_POST["regret"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 8, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-
-         else if (isset($_POST["sad"])) {
-            $q = "INSERT INTO User_has_Mood VALUES (1, 9, " . date('d-m-Y H:i:s', time()) . ")";
-            $qres = mysqli_query($dblink,$q) or die (mysqli_error($dblink));
-        }
-    ?>
 
 </html>
