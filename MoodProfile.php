@@ -44,7 +44,7 @@
 
         <?php
             // establish connection to db
-            $dblink = mysqli_connect('localhost', $username, $password, $dbname)
+            $dblink = mysqli_connect($host, $username, $password, $dbname, $port)
                 or die(mysqli_connect_error() . ' (Error: ' . mysqli_connect_errno() . ')');
 
             // execute query that retrieves entries from User_has_mood table
@@ -61,9 +61,9 @@
         <!-- mood profile -->
         
         <div class="page-content">
-        	<h1 id="header-text">Mood Profile</h1>
-				<table id="mview">
-				    <tr>
+            <h1 id="header-text">Mood Profile</h1>
+                <table id="mview">
+                    <tr>
                         <th>Your mood</th>
                         <th>Date entered</th>
                     </tr>
@@ -93,14 +93,13 @@
                         echo '</tr>';
                     }
                     ?>
-				</table>		   
+                </table>           
             
             <br>
-            <a href="./UserPreferences.php"><h1 id="header-text">User Preferences</h1></a>
-            <br>
-            <a href="./EmotionSelection.php"><h1 id="header-text">Return to Emotion Selection</h1></a> 
+            <a href="./UserPreferences.php"><h1 id="mplink">Set your preferences</h1></a>
+            <a href="./EmotionSelection.php"><h1 id="rlink">Return to Emotion Selection</h1></a> 
             
-            </div>          
+            </div>           
 
         <div class="footer">
 			<p>Copyright &#169; 2014 Doo-Dah, LLC</p>
