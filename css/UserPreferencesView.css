@@ -1,0 +1,130 @@
+/*  USER PREFERENCES VIEW  */
+
+table#prefs-frame
+{
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 8px;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #DDDDDD;
+    width: auto;
+    height: auto;
+}
+
+table#prefs-frame td
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+    border: none;
+}
+
+table#prefs1
+{
+    margin-right: auto;
+    margin-left: auto; 
+    margin-bottom: 10px;
+    padding: 4px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #EEEEEE;
+    width: 400px;
+}
+
+table#prefs1 th
+{
+    margin-right:auto;
+    margin-left:auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-style: bold;
+    font-size:small;
+}
+
+table#prefs1 td
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-size: small;
+}
+
+table#prefs2
+{
+    margin-right: auto;
+    margin-left: auto; 
+    margin-bottom: 10px;
+    padding: 4px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #EEEEEE;
+    width: 175px;
+}
+
+table#prefs2 th
+{
+    margin-right:auto;
+    margin-left:auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-style: bold;
+    font-size:small;
+}
+
+table#prefs2 td
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-size: small;
+}
+
+table#prefs3
+{
+    margin-right: auto;
+    margin-left: auto; 
+    margin-bottom: 10px;
+    padding: 4px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #EEEEEE;
+    width: auto;
+}
+
+table#prefs3 th
+{
+    margin-right:auto;
+    margin-left:auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-style: bold;
+    font-size:small;
+}
+
+table#prefs3 td
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px;
+    border: none;
+    text-align:left;
+    font-size: small;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
