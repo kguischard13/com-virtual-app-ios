@@ -66,10 +66,27 @@
         activeView = Nil;
         
     }
-    NoteViewController* noteViewCtrl = [[NoteViewController alloc] init];
+   
     if (control.selectedSegmentIndex == 0) {
+        NoteViewController* noteViewCtrl = [[NoteViewController alloc] init];
         activeView = noteViewCtrl;
+        noteViewCtrl = Nil;
+    }else if(control.selectedSegmentIndex == 1){
+        DocumentViewController* docViewCtrl = [[DocumentViewController alloc] init];
+        activeView = docViewCtrl;
+        docViewCtrl = Nil;
     }
+    else if(control.selectedSegmentIndex == 2){
+        QuestionViewController* quesViewCtrl = [[QuestionViewController alloc] init];
+        activeView = quesViewCtrl;
+        quesViewCtrl = Nil;
+    }
+    else if(control.selectedSegmentIndex == 3){
+        LiveDiscussionViewController* liveViewCtrl = [[LiveDiscussionViewController alloc] init];
+        activeView = liveViewCtrl;
+        liveViewCtrl = Nil;
+    }
+    
     [self.activeView viewWillAppear:NO];
     [containerView addSubview:activeView.view];
     [self.activeView viewDidAppear:NO];

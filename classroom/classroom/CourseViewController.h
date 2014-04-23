@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NoteViewController.h"
+#import "DocumentViewController.h"
+#import "QuestionViewController.h"
+#import "LiveDiscussionViewController.h"
 #import "User.h"
 #import "Course.h"
 
