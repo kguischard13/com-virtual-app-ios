@@ -25,9 +25,12 @@
     {
         self.view.backgroundColor = [UIColor colorWithRed:.22 green:.72 blue:.80 alpha:1.0];
         self.title = @"City Works - Home";
-//        
+        
+        // test to make sure everything works
         lblCurrentLocation = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frameWidth*.45, frameHeight*.05)];
-        lblCurrentLocation.center = CGPointMake(frameWidth/2, frameHeight*.20);
+        lblCurrentLocation.center = CGPointMake(frameHeight/2, frameWidth*.20);
+        lblCurrentLocation.textAlignment = NSTextAlignmentCenter;
+        lblCurrentLocation.backgroundColor = [UIColor whiteColor];
         lblCurrentLocation.text = @"Current Location";
         [self.view addSubview:lblCurrentLocation];
         

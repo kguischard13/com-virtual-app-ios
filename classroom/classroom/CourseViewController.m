@@ -8,6 +8,7 @@
 
 #import "CourseViewController.h"
 
+
 #define frameWidth self.view.frame.size.width
 #define frameHeight self.view.frame.size.height
 
@@ -17,9 +18,9 @@
 
 @implementation CourseViewController
 
-@synthesize selCourse,currUser, containerView;
+@synthesize selCourse,currUser, containerView, activeView;
 
-
+// have an array of controllers that will be in the uiview ie the notes ctrl, documentsctrl, questionctrl, and live discussionctrl.
 
 
 - (void)viewDidLoad
@@ -33,7 +34,8 @@
     segCtrl.tintColor = [UIColor blackColor];
     segCtrl.frame = CGRectMake(0, 65, frameHeight, 35);
     segCtrl.backgroundColor = [UIColor whiteColor];
-    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:24], NSFontAttributeName, nil];
+    //segCtrl.selectedSegmentIndex = 0;//initializes the index to 1(documents)
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:24], NSFontAttributeName, nil]; //sets the font for the segment titles
     [segCtrl setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     segCtrl.momentary = YES;
     [segCtrl addTarget:self action:@selector(SelectedSegment:) forControlEvents: UIControlEventValueChanged];
@@ -51,9 +53,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) SelectedSegment: (id) sender{
+- (void) SelectedSegment: (UISegmentedControl *)control{
     //change views of the container view
-    return;
+    
+    
+    if (self.activeView) {
+        [self.activeView viewWillDisappear:NO];
+        //[self.containerView bringSubviewToFront:activeView.view];
+        //[self.activeView.view removeFromSuperview];
+        [self.activeView.view performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:NO];
+        [self.activeView viewDidDisappear:NO];
+        activeView = Nil;
+        
+    }
+    NoteViewController* noteViewCtrl = [[NoteViewController alloc] init];
+    if (control.selectedSegmentIndex == 0) {
+        activeView = noteViewCtrl;
+    }
+    [self.activeView viewWillAppear:NO];
+    [containerView addSubview:activeView.view];
+    [self.activeView viewDidAppear:NO];
+    
+    
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoteViewController.h"
 #import "User.h"
 #import "Course.h"
 
@@ -15,11 +16,13 @@
     Course *selCourse;
     UISegmentedControl* segCtrl;
     UIView *containerView;
+    UIViewController *activeView;
     
 }
 
 @property(nonatomic, strong) User *currUser;
 @property(nonatomic, strong) Course *selCourse;
 @property(nonatomic, strong) UIView *containerView;
+@property(nonatomic, strong) UIViewController *activeView;
 
 @end
