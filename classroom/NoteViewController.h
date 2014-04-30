@@ -12,15 +12,11 @@
 @interface NoteViewController : UIViewController <UITextFieldDelegate, UINavigationControllerDelegate>
 {
 	
-    UILabel *lblCurrentLocation;
-    UITextView *txtViewLocation;
-    UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
-    NSManagedObjectContext *managedObjectContext; // pointer to the object context
+    UIButton *btnSave, *btnEdit, *btnExport, *btnViewSlides;
+    UIImageView *imgNoteViewer;
 }
 
-@property(nonatomic, retain) UILabel *lblCurrentLocation;
-@property(nonatomic, retain) UITextView *txtViewLocation;
-@property(nonatomic, retain) UIButton *btnSubmitComp, *viewMyLocation, *btnViewComps, *btnViewRecos;
-@property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property(nonatomic, retain) UIButton *btnSave, *btnEdit, *btnExport, *btnViewSlides;
+@property(nonatomic, retain) UIImageView *imgNoteViewer;
 
 @end
