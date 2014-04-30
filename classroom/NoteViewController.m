@@ -14,27 +14,58 @@
 
 @implementation NoteViewController
 
-@synthesize lblCurrentLocation;
-@synthesize txtViewLocation;
-@synthesize btnSubmitComp, viewMyLocation, btnViewComps, btnViewRecos;
-@synthesize managedObjectContext;
+@synthesize btnEdit, btnExport, btnSave, btnViewSlides, imgNoteViewer;
 
 - (id)init
 {
     if(self == [super init])
     {
         self.view.backgroundColor = [UIColor colorWithRed:.22 green:.72 blue:.80 alpha:1.0];
-        self.title = @"City Works - Home";
+        self.title = @"Virtual Classroom - Notes";
         
-        // test to make sure everything works
-        lblCurrentLocation = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frameWidth*.45, frameHeight*.05)];
-        lblCurrentLocation.center = CGPointMake(frameHeight/2, frameWidth*.20);
-        lblCurrentLocation.textAlignment = NSTextAlignmentCenter;
-        lblCurrentLocation.backgroundColor = [UIColor whiteColor];
-        lblCurrentLocation.text = @"Current Location";
-        [self.view addSubview:lblCurrentLocation];
+        btnEdit = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, frameHeight*.15, frameWidth*.10)];
+        [btnEdit setTitle:@"Edit Note" forState:UIControlStateNormal];
+        [[btnEdit layer] setBorderWidth:2.0f];
+        [[btnEdit layer] setCornerRadius:4.0];
+        [[btnEdit layer] setBorderColor:[UIColor whiteColor].CGColor];
+        //btnEdit.tag = ButtonTypeComp;
+        //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:btnEdit];
         
+        btnSave = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, frameHeight*.15, frameWidth*.10)];
+        [btnSave setTitle:@"Save Note" forState:UIControlStateNormal];
+        [[btnSave layer] setBorderWidth:2.0f];
+        [[btnSave layer] setCornerRadius:4.0];
+        [[btnSave layer] setBorderColor:[UIColor whiteColor].CGColor];
+        //btnEdit.tag = ButtonTypeComp;
+        //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:btnSave];
+        
+        btnExport = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, frameHeight*.15, frameWidth*.10)];
+        [btnExport setTitle:@"Export Note" forState:UIControlStateNormal];
+        [[btnExport layer] setBorderWidth:2.0f];
+        [[btnExport layer] setCornerRadius:4.0];
+        [[btnExport layer] setBorderColor:[UIColor whiteColor].CGColor];
+        //btnEdit.tag = ButtonTypeComp;
+        //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:btnExport];
+        
+        btnViewSlides = [[UIButton alloc] initWithFrame:CGRectMake(20, 500, frameHeight*.15, frameWidth*.10)];
+        [btnViewSlides setTitle:@"View Slides" forState:UIControlStateNormal];
+        [[btnViewSlides layer] setBorderWidth:2.0f];
+        [[btnViewSlides layer] setCornerRadius:4.0];
+        [[btnViewSlides layer] setBorderColor:[UIColor whiteColor].CGColor];
+        //btnEdit.tag = ButtonTypeComp;
+        //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:btnViewSlides];
+        
+        imgNoteViewer = [[UIImageView alloc] initWithFrame:CGRectMake(230, 100, frameHeight*.75, frameWidth*.80)];
+        [[imgNoteViewer layer] setBorderWidth:2.0f];
+        [[imgNoteViewer layer] setCornerRadius:4.0];
+        [[imgNoteViewer layer] setBorderColor:[UIColor whiteColor].CGColor];
+        [self.view addSubview:imgNoteViewer];
     }
+    
     return self;
 }
 
