@@ -1,21 +1,21 @@
 //
-//  QuestionViewController.m
+//  CommentViewController.m
 //  classroom
 //
-//  Created by Kester Guischard on 4/23/14.
+//  Created by O on 4/29/14.
 //  Copyright (c) 2014 Christopher Forehand. All rights reserved.
 //
 
 #define frameWidth self.view.frame.size.width
 #define frameHeight self.view.frame.size.height
 
-#import "QuestionViewController.h"
+#import "CommentViewController.h"
 
-@interface QuestionViewController ()
+@interface CommentViewController ()
 
 @end
 
-@implementation QuestionViewController
+@implementation CommentViewController
 
 @synthesize test;
 
@@ -31,28 +31,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     test = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frameWidth*.45, frameHeight*.05)];
     test.center = CGPointMake(frameHeight/2, frameWidth*.20);
     test.textAlignment = NSTextAlignmentCenter;
     test.backgroundColor = [UIColor whiteColor];
-    test.text = @"Questions";
+    test.text = @"Comments";
     [self.view addSubview:test];
+
+
 }
-
-
-//Retrieve all questions for a given course and student
--(id) getQuestions{
-    
-    NSString *str = [NSString stringWithFormat:@"http://localhost:8080/app/question/getquestions/%d", currUser.Id];
-    NSURL *url = [NSURL URLWithString:str];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSError *error = nil;
-    return [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingMutableContainers error:&error];
-    
-}
-
 
 - (void)didReceiveMemoryWarning
 {

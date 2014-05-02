@@ -110,7 +110,7 @@
         return;
     }
     
-    NSString *str = [NSString stringWithFormat:@"http://localhost:8080/app/user/login/%@/password/%@", email, password ];
+    NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/user/login/%@/password/%@", email, password ];
     NSURL *url=[NSURL URLWithString:str];
     NSData *data=[NSData dataWithContentsOfURL:url];
     NSError *error=nil;

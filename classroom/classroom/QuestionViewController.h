@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+
 
 @interface QuestionViewController : UIViewController{
     UILabel *test;
+    User *currUser;
+    id response;
 }
 
 @property (nonatomic, strong) UILabel *test;
+@property(nonatomic, strong) User *currUser;
+@property id response;
 
 
 @end
