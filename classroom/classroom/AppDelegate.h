@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
+#import "NoteViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 /*
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navCtrl; // allows to have a view stack
 @property (strong, nonatomic) LoginViewController *loginController;
+@property (strong, nonatomic) NoteViewController *noteViewController;
 
 //@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 //@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

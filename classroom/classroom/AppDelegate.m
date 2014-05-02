@@ -14,10 +14,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.loginController = [[LoginViewController alloc] init];
+    /*self.loginController = [[LoginViewController alloc] init];
     //self.homeViewController.managedObjectContext = [self managedObjectContext];
 	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.loginController];
-	self.navCtrl.delegate = self.loginController;
+	self.navCtrl.delegate = self.loginController;*/
+    
+    self.noteViewController = [[NoteViewController alloc] init];
+	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.noteViewController];
+	self.navCtrl.delegate = self.noteViewController;
     
     [self.window 	setRootViewController: self.navCtrl];
     
