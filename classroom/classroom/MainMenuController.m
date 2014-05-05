@@ -22,7 +22,7 @@
         self.title = @"Virtual Classroom Login";
         
         
-        NSString *str = [NSString stringWithFormat:@"http://localhost:8080/app/course/getcoursesofstudent/%d", currUser.Id];
+        NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/course/getcoursesofstudent/%d", currUser.Id];
         NSURL *url=[NSURL URLWithString:str];
         NSData *data=[NSData dataWithContentsOfURL:url];
         NSError *error=nil;
@@ -51,7 +51,7 @@
     self.title = @"Virtual Classroom Main Menu";
     
     
-    /*NSString *str = [NSString stringWithFormat:@"http://localhost:8080/app/course/getcoursesofstudent/%d", currUser.Id];
+    /*NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/course/getcoursesofstudent/%d", currUser.Id];
     NSURL *url=[NSURL URLWithString:str];
     NSData *data=[NSData dataWithContentsOfURL:url];
     NSError *error=nil;

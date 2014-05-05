@@ -78,8 +78,12 @@
     }
     else if(control.selectedSegmentIndex == 2){
         QuestionViewController* quesViewCtrl = [[QuestionViewController alloc] init];
+        quesViewCtrl.currUser = self.currUser;
+        quesViewCtrl.selCourse = self.selCourse;
+        //[self.navigationController pushViewController:quesViewCtrl animated:YES];
         activeView = quesViewCtrl;
         quesViewCtrl = Nil;
+        quesViewCtrl.view.setNeedsDisplay;
     }
     else if(control.selectedSegmentIndex == 3){
         LiveDiscussionViewController* liveViewCtrl = [[LiveDiscussionViewController alloc] init];
