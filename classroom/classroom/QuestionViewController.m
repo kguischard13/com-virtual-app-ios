@@ -170,7 +170,7 @@
     
 }
 
-- (void) questionSelector
+- (void) questionSelector: (id) sender
 {
     
 }
