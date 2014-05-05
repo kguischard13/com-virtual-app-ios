@@ -7,12 +7,37 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "Question.h"
+#import "Course.h"
+
 
 @interface QuestionViewController : UIViewController{
     UILabel *test;
+    UIButton *qButton;
+    User *currUser;
+    Course *selCourse;
+    id response;
+    
+    NSMutableArray *questionList;
+    Question *question;
+    int numOfQuestions;
+    UITextField *questionText;
+    UILabel *qLabel;
 }
 
 @property (nonatomic, strong) UILabel *test;
+@property (nonatomic, strong) UIButton *qButton;
+@property (nonatomic, strong) User *currUser;
+@property (nonatomic, strong) Course *selCourse;
+@property id response;
+
+@property (nonatomic, strong) NSMutableArray *questionList;
+@property (nonatomic, strong) Question *question;
+@property (nonatomic, strong) UITextField *questionText;
+@property (nonatomic, strong) UILabel *qLabel;
+@property int numOfQuestions;
+
 
 
 @end

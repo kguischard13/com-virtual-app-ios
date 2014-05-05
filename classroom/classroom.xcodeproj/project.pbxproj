@@ -35,6 +35,7 @@
 		497C7DD018DCB06F008EDD9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 497C7DCE18DCB06F008EDD9D /* InfoPlist.strings */; };
 		497C7DD218DCB06F008EDD9D /* classroomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C7DD118DCB06F008EDD9D /* classroomTests.m */; };
 		499BEDF118F74AF6005C2FC0 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499BEDF018F74AF6005C2FC0 /* NoteViewController.m */; };
+		954783551910A59200A22CA7 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954783541910A59200A22CA7 /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		499BEDEF18F74AF6005C2FC0 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteViewController.h; path = ../NoteViewController.h; sourceTree = "<group>"; };
 		499BEDF018F74AF6005C2FC0 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteViewController.m; path = ../NoteViewController.m; sourceTree = "<group>"; };
 		499BEDF218F74CD4005C2FC0 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		954783531910A59200A22CA7 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		954783541910A59200A22CA7 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 				2BE327381908036700B9AF55 /* DocumentViewController.m */,
 				2BE3273A1908038C00B9AF55 /* QuestionViewController.h */,
 				2BE3273B1908038C00B9AF55 /* QuestionViewController.m */,
+				954783531910A59200A22CA7 /* CommentViewController.h */,
+				954783541910A59200A22CA7 /* CommentViewController.m */,
 				2BE3273D190803BE00B9AF55 /* LiveDiscussionViewController.h */,
 				2BE3273E190803BE00B9AF55 /* LiveDiscussionViewController.m */,
 				2B658DAA1901A41800AF66E4 /* LoginViewController.h */,
@@ -331,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954783551910A59200A22CA7 /* CommentViewController.m in Sources */,
 				2BAF430A18F88930004B3F4D /* LiveDiscussion.m in Sources */,
 				2BE327391908036700B9AF55 /* DocumentViewController.m in Sources */,
 				497C7DBD18DCB06E008EDD9D /* ViewController.m in Sources */,
