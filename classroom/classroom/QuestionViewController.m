@@ -17,7 +17,11 @@
 
 @implementation QuestionViewController
 
+<<<<<<< HEAD
 @synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton;
+=======
+@synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton, commentViewCtrl;
+>>>>>>> kguischard13-master
 
 
 - (void)viewDidLoad
@@ -39,7 +43,10 @@
 	self.title = @"Questions";
     
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> kguischard13-master
     response = [self getStudentQuestions];
     //response = [self getQuestion: 1];
     
@@ -146,6 +153,7 @@
         NSLog(@"No data");
         return nil;
     }
+<<<<<<< HEAD
 }
 
 
@@ -162,6 +170,71 @@
 }
 
 
+=======
+}
+
+
+- (void) addQuestion
+{   /*
+    AddQuestion *addedQuestion = [[AddQuestion alloc] init];
+	selItem = newItem;
+	editCtrl.selection = newItem;
+	[self.navigationController pushViewController: editCtrl animated:YES];
+	//adds item to array
+	[mainCourses addObject: newItem];
+	//adds item as row in table in root view - new itempath
+	NSIndexPath *newItemPath = [NSIndexPath indexPathForRow:[mainCourses count]-1 inSection: 1]; //class method - automatically autoreleased
+	NSArray *newItemPaths = [NSArray arrayWithObject: newItemPath];
+	[self.tableView insertRowsAtIndexPaths: newItemPaths withRowAnimation:YES];
+
+    NSString *questionContent = questionText.text;
+    NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/question/createquestion/"];
+    NSURL *url = [NSURL URLWithString:str];
+    */
+    
+    
+}
+
+- (void) questionSelector: (id) sender
+{
+    int tag = (int)[sender tag];
+    NSDictionary *dic = response[tag];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    question = [[Question alloc]init];
+    
+    question.QuestionId = [[dic objectForKey:@"Id"] intValue];
+    question.UserId = [[dic objectForKey:@"UserId"] intValue];
+    question.CourseId = [[dic objectForKey:@"CourseId"] intValue];
+    question.Comments = [[dic objectForKey:@"Comments"] intValue];
+    question.Likes = [[dic objectForKey:@"AmtOfLikes"] intValue];
+    question.QuestionType = [[dic objectForKey:@"QuestionType"] intValue];
+    question.FlagAsInappropriate = [[dic objectForKey:@"Flag"] boolValue];
+    question.IsPublic = [[dic objectForKey:@"Public"] boolValue];
+    question.Anonymous = [[dic objectForKey:@"Anonymous"] boolValue];
+    question.Contents = [dic objectForKey:@"Contents"];
+    question.FilePath = [dic objectForKey:@"FilePath"];
+    question.DateCreated = [dic objectForKey:@"DateCreated"];
+    //question = [questionList objectAtIndex:tag];
+    
+    
+    
+    commentViewCtrl = [[CommentViewController alloc]init];
+    commentViewCtrl.selQuestion = question;
+    commentViewCtrl.selCourse = self.selCourse;
+    commentViewCtrl.currUser = self.currUser;
+    
+    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Good" message:[NSString stringWithFormat:@"%@", question.Contents] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //[alert show];
+    //alert = nil;
+    
+    [self presentViewController:commentViewCtrl animated:YES completion:nil];
+}
+
+
+>>>>>>> kguischard13-master
 - (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

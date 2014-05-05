@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+<<<<<<< HEAD
+=======
+#import "CommentViewController.h"
+>>>>>>> kguischard13-master
 #import "User.h"
 #import "Question.h"
 #import "Course.h"
@@ -24,6 +28,10 @@
     int numOfQuestions;
     UITextField *questionText;
     UILabel *qLabel;
+<<<<<<< HEAD
+=======
+    CommentViewController *commentViewCtrl;
+>>>>>>> kguischard13-master
 }
 
 @property (nonatomic, strong) UILabel *test;
@@ -37,7 +45,11 @@
 @property (nonatomic, strong) UITextField *questionText;
 @property (nonatomic, strong) UILabel *qLabel;
 @property int numOfQuestions;
+<<<<<<< HEAD
 
+=======
+>>>>>>> kguischard13-master
 
+@property (nonatomic, strong) CommentViewController *commentViewCtrl;
 
 @end
