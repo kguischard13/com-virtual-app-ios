@@ -149,26 +149,12 @@
 }
 
 
-- (void) addQuestion
-{   /*
-    AddQuestion *addedQuestion = [[AddQuestion alloc] init];
-	selItem = newItem;
-	editCtrl.selection = newItem;
-	[self.navigationController pushViewController: editCtrl animated:YES];
-	//adds item to array
-	[mainCourses addObject: newItem];
-	//adds item as row in table in root view - new itempath
-	NSIndexPath *newItemPath = [NSIndexPath indexPathForRow:[mainCourses count]-1 inSection: 1]; //class method - automatically autoreleased
-	NSArray *newItemPaths = [NSArray arrayWithObject: newItemPath];
-	[self.tableView insertRowsAtIndexPaths: newItemPaths withRowAnimation:YES];
-
-    NSString *questionContent = questionText.text;
-    NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/question/createquestion/"];
-    NSURL *url = [NSURL URLWithString:str];
-    */
-    
+- (void) addQuestion: (NSString*) questionText
+{
     
 }
+
+
 
 - (void) questionSelector
 {
