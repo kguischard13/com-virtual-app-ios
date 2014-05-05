@@ -17,7 +17,7 @@
 
 @implementation QuestionViewController
 
-@synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton;
+@synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton, commentViewCtrl;
 
 
 - (void)viewDidLoad
@@ -37,7 +37,6 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:.22 green:.72 blue:.80 alpha:1.0];
 	self.title = @"Questions";
-    
     
     
     response = [self getStudentQuestions];
@@ -172,7 +171,40 @@
 
 - (void) questionSelector: (id) sender
 {
+    int tag = (int)[sender tag];
+    NSDictionary *dic = response[tag];
     
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    question = [[Question alloc]init];
+    
+    question.QuestionId = [[dic objectForKey:@"Id"] intValue];
+    question.UserId = [[dic objectForKey:@"UserId"] intValue];
+    question.CourseId = [[dic objectForKey:@"CourseId"] intValue];
+    question.Comments = [[dic objectForKey:@"Comments"] intValue];
+    question.Likes = [[dic objectForKey:@"AmtOfLikes"] intValue];
+    question.QuestionType = [[dic objectForKey:@"QuestionType"] intValue];
+    question.FlagAsInappropriate = [[dic objectForKey:@"Flag"] boolValue];
+    question.IsPublic = [[dic objectForKey:@"Public"] boolValue];
+    question.Anonymous = [[dic objectForKey:@"Anonymous"] boolValue];
+    question.Contents = [dic objectForKey:@"Contents"];
+    question.FilePath = [dic objectForKey:@"FilePath"];
+    question.DateCreated = [dic objectForKey:@"DateCreated"];
+    //question = [questionList objectAtIndex:tag];
+    
+    
+    
+    commentViewCtrl = [[CommentViewController alloc]init];
+    commentViewCtrl.selQuestion = question;
+    commentViewCtrl.selCourse = self.selCourse;
+    commentViewCtrl.currUser = self.currUser;
+    
+    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Good" message:[NSString stringWithFormat:@"%@", question.Contents] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //[alert show];
+    //alert = nil;
+    
+    [self presentViewController:commentViewCtrl animated:YES completion:nil];
 }
 
 

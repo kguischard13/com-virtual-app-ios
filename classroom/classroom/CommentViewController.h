@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QuestionViewController.h"
+#import "User.h"
+#import "Question.h"
+#import "Course.h"
 
 @interface CommentViewController : UIViewController{
-    UILabel *test;
+    User* currUser;
+    Course* selCourse;
+    Question* selQuestion;
+    id response;
+    int numofComment;
 }
 
-@property (nonatomic, strong) UILabel *test;
+@property id response;
+@property int numofComment;
+@property (nonatomic, strong) User *currUser;
+@property (nonatomic, strong) Course *selCourse;
+@property (nonatomic, strong) Question *selQuestion;
 
 
 @end
