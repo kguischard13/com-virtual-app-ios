@@ -32,7 +32,7 @@
 @property (nonatomic, retain) NSString *Contents;
 @property (nonatomic, retain) NSString *FilePath;
 @property (nonatomic, retain) NSDate *DateCreated;
-@property(nonatomic, strong) NSMutableArray *CommentsList;
+@property (nonatomic, retain) NSMutableArray *CommentsList;
 
 
 

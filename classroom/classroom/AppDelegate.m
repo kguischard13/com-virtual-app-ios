@@ -14,16 +14,31 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    /*self.loginController = [[LoginViewController alloc] init];
+    
+    self.loginController = [[LoginViewController alloc] init];
     //self.homeViewController.managedObjectContext = [self managedObjectContext];
 	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.loginController];
-	self.navCtrl.delegate = self.loginController;*/
+	self.navCtrl.delegate = self.loginController;
     
+    
+    /*
+     self.questionViewController = [[QuestionViewController alloc] init];
+     self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.questionViewController];
+     */
+    
+    /*
     self.noteViewController = [[NoteViewController alloc] init];
 	self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.noteViewController];
 	self.navCtrl.delegate = self.noteViewController;
+    */
     
-    [self.window 	setRootViewController: self.navCtrl];
+    /*
+    self.mainMenuController = [[MainMenuController alloc] init];
+    self.navCtrl = [[UINavigationController alloc] initWithRootViewController: self.mainMenuController];
+    self.navCtrl.delegate = self.mainMenuController;
+    */
+     
+    [self.window setRootViewController: self.navCtrl];
     
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
     
