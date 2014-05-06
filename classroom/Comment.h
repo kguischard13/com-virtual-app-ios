@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Comments : NSObject{
+@interface Comment : NSObject{
     int Id;
     int QuestionId;
     int UserId;

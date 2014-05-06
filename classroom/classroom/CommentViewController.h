@@ -10,13 +10,16 @@
 #import "User.h"
 #import "Question.h"
 #import "Course.h"
+#import "Comment.h"
 
-@interface CommentViewController : UIViewController{
+@interface CommentViewController : UIViewController<UIAlertViewDelegate, NSURLConnectionDelegate,NSURLConnectionDataDelegate>{
     User* currUser;
     Course* selCourse;
     Question* selQuestion;
     id response;
     int numofComment;
+    UILabel *commentLbl;
+    NSString *contentString;
 }
 
 @property id response;
@@ -24,6 +27,8 @@
 @property (nonatomic, strong) User *currUser;
 @property (nonatomic, strong) Course *selCourse;
 @property (nonatomic, strong) Question *selQuestion;
+@property (nonatomic, strong) UILabel *commentLbl;
+@property (nonatomic, strong) NSString *contentString;
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import "Comment.h"
 
-@implementation Comments
+@implementation Comment
 
 
 @synthesize Id;
