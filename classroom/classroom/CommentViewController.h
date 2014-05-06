@@ -7,15 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-<<<<<<< HEAD
-#import "QuestionViewController.h"
-
-@interface CommentViewController : UIViewController{
-    UILabel *test;
-}
-
-@property (nonatomic, strong) UILabel *test;
-=======
 #import "User.h"
 #import "Question.h"
 #import "Course.h"
@@ -33,7 +24,7 @@
 @property (nonatomic, strong) User *currUser;
 @property (nonatomic, strong) Course *selCourse;
 @property (nonatomic, strong) Question *selQuestion;
->>>>>>> kguischard13-master
+
 
 
 @end

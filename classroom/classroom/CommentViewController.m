@@ -17,11 +17,8 @@
 
 @implementation CommentViewController
 
-<<<<<<< HEAD
-@synthesize test;
-=======
-@synthesize currUser, selCourse, selQuestion, response, numofComment ;
->>>>>>> kguischard13-master
+@synthesize currUser, selCourse, selQuestion, response, numofComment;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,14 +28,6 @@
     }
     return self;
 }
-
-<<<<<<< HEAD
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    test = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frameWidth*.45, frameHeight*.05)];
-=======
-
 
 - (void)viewDidLoad
 {
@@ -58,22 +47,16 @@
     
     [self.view addSubview:navbar];
     /*test = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frameWidth*.45, frameHeight*.05)];
->>>>>>> kguischard13-master
     test.center = CGPointMake(frameHeight/2, frameWidth*.20);
     test.textAlignment = NSTextAlignmentCenter;
     test.backgroundColor = [UIColor whiteColor];
     test.text = @"Comments";
-<<<<<<< HEAD
-    [self.view addSubview:test];
-=======
     [self.view addSubview:test];*/
->>>>>>> kguischard13-master
 
 
 }
 
-<<<<<<< HEAD
-=======
+
 -(void) backButtonPressed{
     //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Good" message:@"Worked" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     //[alert show];
@@ -85,7 +68,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
->>>>>>> kguischard13-master
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

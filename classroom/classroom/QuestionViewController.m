@@ -17,11 +17,7 @@
 
 @implementation QuestionViewController
 
-<<<<<<< HEAD
-@synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton;
-=======
 @synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton, commentViewCtrl;
->>>>>>> kguischard13-master
 
 
 - (void)viewDidLoad
@@ -43,10 +39,7 @@
 	self.title = @"Questions";
     
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> kguischard13-master
+
     response = [self getStudentQuestions];
     //response = [self getQuestion: 1];
     
@@ -153,7 +146,7 @@
         NSLog(@"No data");
         return nil;
     }
-<<<<<<< HEAD
+
 }
 
 
@@ -169,9 +162,6 @@
     
 }
 
-
-=======
-}
 
 
 - (void) addQuestion
@@ -234,7 +224,6 @@
 }
 
 
->>>>>>> kguischard13-master
 - (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
