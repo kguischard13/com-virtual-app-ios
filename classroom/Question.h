@@ -1,10 +1,10 @@
-//
-//  Question.h
-//  DataClass
-//
-//  Created by Kester Guischard on 4/11/14.
-//  Copyright (c) 2014 Kester Guischard. All rights reserved.
-//
+/*
+ * Brief: Data container for "Question" class
+ * Author: Olivia Bradley-Willemann
+ * Date: 4/2014
+ * Major Mods: n/a
+ *
+ */
 
 #import <Foundation/Foundation.h>
 

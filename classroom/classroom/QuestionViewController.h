@@ -1,10 +1,10 @@
-//
-//  QuestionViewController.h
-//  classroom
-//
-//  Created by Kester Guischard on 4/23/14.
-//  Copyright (c) 2014 Christopher Forehand. All rights reserved.
-//
+/*
+ * Brief: Controller for "Question" view class
+ * Author: Olivia Bradley-Willemann
+ * Date: 4/2014
+ * Major Mods: n/a
+ *
+ */
 
 #import <UIKit/UIKit.h>
 
