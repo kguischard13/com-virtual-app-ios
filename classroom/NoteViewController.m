@@ -19,21 +19,11 @@
 - (id)init
 {
     if(self == [super init])
+    
     {
         self.view.backgroundColor = [UIColor colorWithRed:.22 green:.72 blue:.80 alpha:1.0];
         self.title = @"Virtual Classroom - Notes";
         
-<<<<<<< HEAD
-        btnEdit = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, frameHeight*.15, frameWidth*.10)];
-        [btnEdit setTitle:@"Edit Note" forState:UIControlStateNormal];
-        [[btnEdit layer] setBorderWidth:2.0f];
-        [[btnEdit layer] setCornerRadius:4.0];
-        [[btnEdit layer] setBorderColor:[UIColor whiteColor].CGColor];
-        //btnEdit.tag = ButtonTypeComp;
-        //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
-        [self.view addSubview:btnEdit];
-        
-=======
         UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size. width)];
         scrollView.backgroundColor = [UIColor clearColor];
         scrollView.pagingEnabled = YES;
@@ -49,7 +39,6 @@
         //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
         [scrollView addSubview:btnEdit];
         
->>>>>>> kguischard13-master
         btnSave = [[UIButton alloc] initWithFrame:CGRectMake(20, 300, frameHeight*.15, frameWidth*.10)];
         [btnSave setTitle:@"Save Note" forState:UIControlStateNormal];
         [[btnSave layer] setBorderWidth:2.0f];
@@ -57,11 +46,8 @@
         [[btnSave layer] setBorderColor:[UIColor whiteColor].CGColor];
         //btnEdit.tag = ButtonTypeComp;
         //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
-<<<<<<< HEAD
-        [self.view addSubview:btnSave];
-=======
         [scrollView addSubview:btnSave];
->>>>>>> kguischard13-master
+
         
         btnExport = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, frameHeight*.15, frameWidth*.10)];
         [btnExport setTitle:@"Export Note" forState:UIControlStateNormal];
@@ -70,11 +56,7 @@
         [[btnExport layer] setBorderColor:[UIColor whiteColor].CGColor];
         //btnEdit.tag = ButtonTypeComp;
         //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
-<<<<<<< HEAD
-        [self.view addSubview:btnExport];
-=======
         [scrollView addSubview:btnExport];
->>>>>>> kguischard13-master
         
         btnViewSlides = [[UIButton alloc] initWithFrame:CGRectMake(20, 500, frameHeight*.15, frameWidth*.10)];
         [btnViewSlides setTitle:@"View Slides" forState:UIControlStateNormal];
@@ -83,25 +65,18 @@
         [[btnViewSlides layer] setBorderColor:[UIColor whiteColor].CGColor];
         //btnEdit.tag = ButtonTypeComp;
         //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
-<<<<<<< HEAD
-        [self.view addSubview:btnViewSlides];
-=======
         [scrollView addSubview:btnViewSlides];
->>>>>>> kguischard13-master
         
         imgNoteViewer = [[UIImageView alloc] initWithFrame:CGRectMake(230, 100, frameHeight*.75, frameWidth*.80)];
         [[imgNoteViewer layer] setBorderWidth:2.0f];
         [[imgNoteViewer layer] setCornerRadius:4.0];
         [[imgNoteViewer layer] setBorderColor:[UIColor whiteColor].CGColor];
-<<<<<<< HEAD
-        [self.view addSubview:imgNoteViewer];
-=======
         [scrollView addSubview:imgNoteViewer];
         
         
         scrollView.contentSize = CGSizeMake(scrollView.frame.size.height,scrollView.frame.size.width);
         [self.view addSubview:scrollView];
->>>>>>> kguischard13-master
+
     }
     
     return self;

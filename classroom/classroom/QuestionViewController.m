@@ -17,11 +17,7 @@
 
 @implementation QuestionViewController
 
-<<<<<<< HEAD
-@synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton;
-=======
 @synthesize test, currUser, selCourse, response, questionList, question, numOfQuestions, questionText, qLabel, qButton, commentViewCtrl;
->>>>>>> kguischard13-master
 
 
 - (void)viewDidLoad
@@ -43,10 +39,7 @@
 	self.title = @"Questions";
     
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> kguischard13-master
+
     response = [self getStudentQuestions];
     //response = [self getQuestion: 1];
     
@@ -153,39 +146,22 @@
         NSLog(@"No data");
         return nil;
     }
-<<<<<<< HEAD
+
 }
 
 
-- (void) addQuestion
-{   /*
-    AddQuestion *addedQuestion = [[AddQuestion alloc] init];
-	selItem = newItem;
-	editCtrl.selection = newItem;
-	[self.navigationController pushViewController: editCtrl animated:YES];
-	//adds item to array
-	[mainCourses addObject: newItem];
-	//adds item as row in table in root view - new itempath
-	NSIndexPath *newItemPath = [NSIndexPath indexPathForRow:[mainCourses count]-1 inSection: 1]; //class method - automatically autoreleased
-	NSArray *newItemPaths = [NSArray arrayWithObject: newItemPath];
-	[self.tableView insertRowsAtIndexPaths: newItemPaths withRowAnimation:YES];
-
-    NSString *questionContent = questionText.text;
-    NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/question/createquestion/"];
-    NSURL *url = [NSURL URLWithString:str];
-    */
-    
+- (void) addQuestion: (NSString*) questionText
+{
     
 }
+
+
 
 - (void) questionSelector
 {
     
 }
 
-
-=======
-}
 
 
 - (void) addQuestion
@@ -248,7 +224,6 @@
 }
 
 
->>>>>>> kguischard13-master
 - (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
