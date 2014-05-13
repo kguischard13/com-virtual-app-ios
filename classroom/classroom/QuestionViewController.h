@@ -1,16 +1,14 @@
-//
-//  QuestionViewController.h
-//  classroom
-//
-//  Created by Kester Guischard on 4/23/14.
-//  Copyright (c) 2014 Christopher Forehand. All rights reserved.
-//
+/*
+ * Brief: Controller for "Question" view class
+ * Author: Olivia Bradley-Willemann
+ * Date: 4/2014
+ * Major Mods: n/a
+ *
+ */
 
 #import <UIKit/UIKit.h>
-<<<<<<< HEAD
-=======
+
 #import "CommentViewController.h"
->>>>>>> kguischard13-master
 #import "User.h"
 #import "Question.h"
 #import "Course.h"
@@ -28,28 +26,26 @@
     int numOfQuestions;
     UITextField *questionText;
     UILabel *qLabel;
-<<<<<<< HEAD
-=======
     CommentViewController *commentViewCtrl;
->>>>>>> kguischard13-master
 }
 
-@property (nonatomic, strong) UILabel *test;
-@property (nonatomic, strong) UIButton *qButton;
-@property (nonatomic, strong) User *currUser;
-@property (nonatomic, strong) Course *selCourse;
-@property id response;
-
 @property (nonatomic, strong) NSMutableArray *questionList;
-@property (nonatomic, strong) Question *question;
+@property int numOfQuestions;
 @property (nonatomic, strong) UITextField *questionText;
 @property (nonatomic, strong) UILabel *qLabel;
-@property int numOfQuestions;
-<<<<<<< HEAD
+@property (nonatomic, strong) Question *question;
 
-=======
->>>>>>> kguischard13-master
+    @property id response;
+    @property (nonatomic, strong) UILabel *test;
+    @property (nonatomic, strong) UIButton *qButton;
+    @property (nonatomic, strong) User *currUser;
+    @property (nonatomic, strong) Course *selCourse;
+
+    
 
 @property (nonatomic, strong) CommentViewController *commentViewCtrl;
+
+
+
 
 @end

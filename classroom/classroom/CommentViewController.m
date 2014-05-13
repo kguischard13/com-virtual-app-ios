@@ -18,8 +18,13 @@
 
 @implementation CommentViewController
 
+<<<<<<< HEAD
 @synthesize test;
 @synthesize currUser, selCourse, selQuestion, response, numofComment, commentLbl, contentString;
+=======
+@synthesize currUser, selCourse, selQuestion, response, numofComment;
+
+>>>>>>> 98be5bb2d1663d57f888ac9082c2debac513cf30
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +62,7 @@
     test.backgroundColor = [UIColor whiteColor];
     test.text = @"Comments";
     [self.view addSubview:test];*/
+<<<<<<< HEAD
     
     response = [self getComments];
     
@@ -91,6 +97,8 @@
         [self.view addSubview:commentLbl];
     }
 }
+=======
+>>>>>>> 98be5bb2d1663d57f888ac9082c2debac513cf30
 
 -(id) getComments{
     NSString *str = [NSString stringWithFormat:@"http://vcr-env.elasticbeanstalk.com/comment/getcomments/question/%d", selQuestion.QuestionId];
@@ -145,6 +153,10 @@
     
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98be5bb2d1663d57f888ac9082c2debac513cf30
 -(void) backButtonPressed{
     //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Good" message:@"Worked" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     //[alert show];
@@ -156,6 +168,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+<<<<<<< HEAD
 -(void) addButtonPressed{
     UIAlertView *addCommentAlert = [[UIAlertView alloc] initWithTitle:@"Comment" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: @"Add",nil];
     
@@ -299,6 +312,8 @@
     // The request has failed for some reason!
     // Check the error var
 }*/
+=======
+>>>>>>> 98be5bb2d1663d57f888ac9082c2debac513cf30
 
 - (void)didReceiveMemoryWarning
 {
