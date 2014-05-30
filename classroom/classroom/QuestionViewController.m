@@ -39,6 +39,7 @@
 	self.title = @"Questions";
     
     
+
     response = [self getStudentQuestions];
     //response = [self getQuestion: 1];
     
@@ -145,7 +146,22 @@
         NSLog(@"No data");
         return nil;
     }
+
 }
+
+
+- (void) addQuestion: (NSString*) questionText
+{
+    
+}
+
+
+
+- (void) questionSelector
+{
+    
+}
+
 
 
 - (void) addQuestion

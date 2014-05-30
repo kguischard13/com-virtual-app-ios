@@ -19,6 +19,7 @@
 - (id)init
 {
     if(self == [super init])
+    
     {
         self.view.backgroundColor = [UIColor colorWithRed:.22 green:.72 blue:.80 alpha:1.0];
         self.title = @"Virtual Classroom - Notes";
@@ -46,6 +47,7 @@
         //btnEdit.tag = ButtonTypeComp;
         //[btnEdit addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchDown];
         [scrollView addSubview:btnSave];
+
         
         btnExport = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, frameHeight*.15, frameWidth*.10)];
         [btnExport setTitle:@"Export Note" forState:UIControlStateNormal];
@@ -74,6 +76,7 @@
         
         scrollView.contentSize = CGSizeMake(scrollView.frame.size.height,scrollView.frame.size.width);
         [self.view addSubview:scrollView];
+
     }
     
     return self;
